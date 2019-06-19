@@ -1,7 +1,7 @@
 ## ask_name path
 * ask_name
   - utter_botname
-  
+
 ## ask_personality path
 * ask_personality
   - utter_who

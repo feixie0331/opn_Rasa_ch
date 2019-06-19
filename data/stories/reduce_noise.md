@@ -3,7 +3,7 @@
   - utter_focused
 * affirm
   - utter_affirm
-  
+
 ## focused deny path
 * focused
   - utter_focused
@@ -20,7 +20,7 @@
 * reduce_noise
   - utter_reduce_noise
 * deny
-  - utter_deny 
+  - utter_deny
 
 ## reduce noise explain path affirm
 * reduce_noise

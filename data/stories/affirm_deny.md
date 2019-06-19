@@ -4,4 +4,4 @@
 
 ## deny path
 * deny
-  - utter_deny  
+  - utter_deny

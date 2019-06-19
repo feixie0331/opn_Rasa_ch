@@ -39,7 +39,7 @@ class FetchUserIdAction(Action):
 class ActionLeaveNote(Action):
     def name(self):
         return "action_leave_note"
-    def submit(
+    def run(
         self,
         dispatcher: CollectingDispatcher,
         tracker: Tracker,
@@ -48,7 +48,7 @@ class ActionLeaveNote(Action):
         """Define what the form has to do
             after all required slots are filled"""
         with open("Output.txt", "w") as text_file:
-            print("New dom needed")
+            text_file.write("New dom needed")
         dispatcher.utter_message("HHHHH")
         # utter submit template
         dispatcher.utter_template("utter_make_note", tracker)

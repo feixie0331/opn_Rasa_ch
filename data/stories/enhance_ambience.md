@@ -3,7 +3,7 @@
   - utter_lively
 * affirm
   - utter_affirm
-  
+
 ## lively deny path
 * lively
   - utter_lively
@@ -15,13 +15,13 @@
   - utter_enhance_ambience
 * affirm
   - utter_affirm
-  
+
 ## enhance ambience path deny
 * enhance_ambience
   - utter_enhance_ambience
 * deny
   - utter_deny
-  
+
 ## enhance ambience explain path affirm
 * enhance_ambience
   - utter_enhance_ambience
@@ -29,7 +29,7 @@
   - utter_lively_change
 * affirm
   - utter_affirm
-  
+
 ## enhance ambience explain path deny
 * enhance_ambience
   - utter_enhance_ambience
