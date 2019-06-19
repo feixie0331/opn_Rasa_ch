@@ -22,9 +22,9 @@ action_endpoint:
 
 tracker_store:
     type: SQL
-    dialect: "sqlite"  # the dialect used to interact with the db
-    url: "localhost"  # (optional) host of the sql db
-    db: "rasa.db"  # path to your db
+    dialect: sqlite  # the dialect used to interact with the db
+#    url: # (optional) host of the sql db
+    db: rasa.db  # path to your db
     username:  # username used for authentication
     password:  # password used for authentication
 #tracker_store:
