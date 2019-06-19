@@ -1,6 +1,3 @@
-## intent:greet
-- how are you
-
 ## intent:reduce_noise
 - its noisy
 - less music

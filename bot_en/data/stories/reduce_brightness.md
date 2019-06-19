@@ -37,7 +37,3 @@
   - utter_natural1_change
 * deny
   - utter_deny
-
-## New Story
-
-* greet

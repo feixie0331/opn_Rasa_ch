@@ -80,6 +80,7 @@
 - I need to adjust [crisp](features) settings
 - modify [crisp](features) setting
 - change [crisp](features)
+- [crisp](features) program
 
 ## intent:what_crisp
 - what is [crisp](features)
@@ -105,6 +106,10 @@
 - not really
 
 
+## intent:echo
+- sound is hollow
+- like an echo
+
 ## intent:enhance_ambience
 - enhance ambience
 - more music
@@ -125,6 +130,7 @@
 - I need to adjust [focused](feature) settings
 - modify [focused](feature) setting
 - change [focused](feature)
+- [focused](feature) program
 
 ## intent:what_focused
 - what is [focused](feature)?
@@ -213,6 +219,7 @@
 - hello robot
 - hi OPN
 - hi chatbot
+- how are you
 
 
 ## intent:Oticon_handoff
@@ -274,6 +281,7 @@
 - I need to adjust [lively](features) settings
 - modify [lively](features) setting
 - change [lively](features)
+- [lively](features) program
 
 ## intent:what_lively
 - what is [lively](features)
@@ -311,11 +319,14 @@
 - I need to adjust [natural](features) settings
 - modify [natural](features) setting
 - change [natural](features)
+- [natural](features) program
 
 ## intent:what_natural
 - what is [natural](features)
 - what would be different if I change [natural](features) setting?
 - what controlled by [natural](features)?
+- how could [natural](features) program help?
+- when should I use [natural](features)
 
 
 ## intent:occlusion
@@ -448,13 +459,8 @@
 ## intent:reduce_intensity
 - reduce intensity
 - too intense
-- less ambience
-- more natural
-- attenuate sounds
+- sounds are too loud
 
-
-## intent:greet
-- how are you
 
 ## intent:reduce_noise
 - its noisy

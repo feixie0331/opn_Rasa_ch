@@ -4,6 +4,7 @@
 - I need to adjust [lively](features) settings
 - modify [lively](features) setting
 - change [lively](features)
+- [lively](features) program
 
 ## intent:what_lively
 - what is [lively](features)
