@@ -1,7 +1,7 @@
 ## intent:report_problem
-- i need change settings
-- I need help
-- i have a problem
-- I need new program
-- I want to change the current settings
-- The current settings doesn't work well.
+- 我要改程序
+- 我需要帮助
+- 我遇到问题
+- 我需要一个新的程序
+- 我想调整现在的设置
+- 现在的设置不是很好

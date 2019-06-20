@@ -1,6 +1,4 @@
 ## intent:occlusion
-- [occlusion](features) setting
-- [occlusion](features) setting
-- I need to adjust [occlusion](features) settings
-- modify [occlusion](features) setting
-- change [occlusion](features)
+- [闭塞效应](声音特质)矫正
+- 矫正[闭塞效应](声音特质)
+- 出现[闭塞效应](声音特质)

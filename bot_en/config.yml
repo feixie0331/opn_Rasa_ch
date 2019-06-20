@@ -21,7 +21,8 @@ policies:
     fallback_nlu_action_name: "action_default_fallback"
     deny_suggestion_intent_name: "out_of_scope"
   - name: MemoizationPolicy
-  - name: KerasPolicy
+#  - name: KerasPolicy
+  - name: EmbeddingPolicy
   - name: FormPolicy
   - name: MappingPolicy
   

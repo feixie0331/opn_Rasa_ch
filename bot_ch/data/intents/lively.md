@@ -1,11 +1,9 @@
 ## intent:lively
-- [lively](features) setting
-- [lively](features) setting
-- I need to adjust [lively](features) settings
-- modify [lively](features) setting
-- change [lively](features)
+- 更[生动](声音特质)的声音的设定
+- 调到[生动](声音特质)
+- 变成[生动](声音特质)
 
 ## intent:what_lively
-- what is [lively](features)
-- what would be different if I change [lively](features) setting?
-- what controlled by [lively](features)?
+- 什么是[生动](声音特质)
+- [生动](声音特质)设定会带来什么不同
+- [生动](声音特质)控制了什么

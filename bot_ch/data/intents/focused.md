@@ -1,10 +1,10 @@
 ## intent:focused
-- [focused](feature) setting
-- I need to adjust [focused](feature) settings
-- modify [focused](feature) setting
-- change [focused](feature)
+- 更[集中](声音特质)的声音的设定
+- 调到[集中](声音特质)
+- 变成[集中](声音特质)
+
 
 ## intent:what_focused
-- what is [focused](feature)?
-- what would be different if I change [focused](feature) setting?
-- what controlled by [focused](feature)?
+- 什么是[集中](声音特质)
+- [集中](声音特质)设定会带来什么不同
+- [集中](声音特质)控制了什么

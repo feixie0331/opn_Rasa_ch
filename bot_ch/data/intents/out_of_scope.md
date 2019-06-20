@@ -1,110 +1,109 @@
 ## intent:out_of_scope
-- I want pizza
-- please help with my ice cream it's dripping
-- no wait go back i want a dripping ice cream but a cone that catches it so you can drink the ice cream later
-- i want a non dripping ice cream
-- hey little mama let em whisper in your ear
-- someone call the police i think the bot died
-- show me a picture of a chicken
-- neither
-- I want french cuisine
-- i am hungry
-- restaurants
-- restaurant
-- you're a loser lmao
-- can i be shown a gluten free restaurant
-- i don't care!!!!
-- i do not care how are you
-- again?
-- oh wait i gave you my work email address can i change it?
-- hang on let me find it
-- stop it, i do not care!!!
-- really? you're so touchy?
-- how come?
-- I changed my mind
-- what?
-- did i break you
-- I don't wanna tell the name of my company
-- that link doesn't work!
-- you already have that
-- this is a really frustrating experience
-- no stop
-- i want a french restaurant
-- shit bot
-- do you want to marry me?
-- give me food
-- i want food
-- udo, I want to marry you
-- i wanna party
-- shitmuncher
-- I like you
-- i want pizza
-- i want pizza!!
-- silly bot
-- i want to eat
-- you are a stupid bot
-- i hate you
-- Can I ask you questions first?
-- is it a wasteland full of broken robot parts?
-- i can't deal with _your_ request
-- are you vegan
-- who will anser my email?
-- do you sell vacuum robots?
-- i want to buy a roomba for my grandson
-- and make chicken noises into the phone
-- is barbara still married to you
-- what's your wife doing this weekend
-- how are the kids
-- you're rather dull
-- personal or work?
-- are you using Rasa Core and NLU ?
-- tell me a joke
-- what else?
-- I already told you! I'm a shitmuncher
-- I'm a shitmuncher
-- who are the engineers at rasa?
-- who are they?
-- can we keep chatting?
-- talk to me
-- who is your favourite robot?
-- a tamed mouse will arrive at your doorstep in the next couple of days
-- you will know it from the single red rose it carries between its teeth
-- i will tame a mouse for you
-- isn't the newsletter just spam?
-- go back
-- can you help me with the docs?
-- sorry, i cannot rephrase
-- and your REST API doesn't work
-- i told you already
-- better than you
-- oh my god, not again!
-- you are a badass bot!
-- lol
-- why do you need that?
-- is that any of your business
-- can you help me with your docs?
-- i immediately need help with implementing the coolest bot you can imagine
-- can you help me with your docs
-- can you tell me how to build a bot?
-- can you learn from our conversation?
-- common, just try
-- hey, I contacted you a couple of days ago but didn't get any response, any news?
-- please hurry, i have deadline in two weeks to deliver the bot it is for very big company
-- you are annoying
-- Do I have to accept?
-- Is Rasa really smart?
-- kannst du auch deutsch?
-- are the newsletter worth the subscription?
-- it's a pity
-- i want more of you in my life!
-- the one that is better than you
-- you suck
-- bots are bad
-- i dont like bots
-- do you have a phone number?
-- where do you live?
-- how are akela's cats doing?
-- but I just told you that :(
-- Why don’t you answer?
-- But you're an english site :(
-- can you help me to build a bot
+- 我想要披萨
+- 请帮助我的冰淇淋滴水
+- 没有等待回去我想要一个滴冰淇淋，但需要一个锥形冰块，以便你可以在以后喝冰淇淋
+- 我想要一个不滴水的冰淇淋
+- 嘿小妈妈让你耳边低语
+- 有人报警，我认为机器人死了
+- 给我看一张鸡的照片
+- 都没有
+- 我想要法国菜
+- 我饿了
+- 餐厅
+- 餐厅
+- 你是一个失败者lmao
+- 我可以看到一个无麸质餐厅
+- 我不在乎!!!!
+- 我不在乎你好吗
+- 再次？
+- 哦等我给你我的工作电子邮件地址可以改变吗？
+- 坚持让我找到它
+- 停下来，我不在乎！
+- 真的吗？你这么敏感吗？
+- 怎么会？
+- 我改变主意了
+- 什么？
+- 我打破了你吗？
+- 我不想告诉我公司的名字
+- 该链接不起作用！
+- 你已经拥有了
+- 这是一个非常令人沮丧的经历
+- 不停
+- 我想要一家法国餐厅
+- 狗屎机器人
+- 嫁给我好吗？
+- 给我食物
+- 我要食物
+-  udo，我想嫁给你
+- 我想参加派对
+-  shitmuncher
+- 我喜欢你
+- 我想要披萨
+- 我想要披萨！！
+- 傻机器人
+- 我想吃
+- 你是一个愚蠢的机器人
+- 我恨你
+- 我可以先问你问题吗？
+- 这是一个充满破碎机器人零件的荒地吗？
+- 我无法处理_your_请求
+- 你是素食主义者吗？
+- 谁会收看我的电子邮件？
+- 你卖真空机器人吗？
+- 我想为我的孙子买一个roomba
+- 并在手机中发出鸡鸣声
+- 芭芭拉还和你结婚了
+- 这个周末你妻子在做什么
+- 孩子们怎么样
+- 你很无聊
+- 个人还是工作？
+- 你在使用Rasa Core和NLU吗？
+- 给我说个笑话
+- 还有什么？
+- 我已经跟你说过！我是个shitmuncher
+- 谁是rasa的工程师？
+- 他们是谁？
+- 我们可以继续聊天吗？
+- 跟我说话
+- 谁是你最喜欢的机器人？
+- 在接下来的几天里，驯服的老鼠将到达您家门口
+- 你会从它牙齿间的一朵红玫瑰中知道它
+- 我会为你驯服一只老鼠
+- 简报不仅仅是垃圾邮件吗？
+- 回去
+- 你可以帮我解决这些问题吗？
+- 对不起，我不能改写
+- 并且您的REST API不起作用
+- 我已经告诉过你了
+- 比你好
+- 哦，天啊，不是了！
+- 你是一个坏蛋机器人！
+- 大声笑
+- 你为什么需要那个？
+- 这是你的任何业务
+- 你能帮我解决你的文件吗？
+- 我立即需要帮助来实现你能想象到的最酷的机器人
+- 你能帮我解决你的文档吗？
+- 你能告诉我如何建立机器人吗？
+- 你能从我们的谈话中学到什么吗？
+- 常见，只是尝试
+- 嘿，我几天前联系过你，但没有得到任何回复，有什么消息吗？
+- 请快点，我有两个星期的截止日期，为非常大的公司提供机器人
+- 你很烦人
+- 我必须接受吗？
+-  Rasa真的很聪明吗？
+-  kannst du auch deutsch？
+- 是否值得订阅的时事通讯？
+- 真遗憾
+- 我生命中想要更多你！
+- 比你好的那个
+- 你好烂
+- 机器人很糟糕
+- 我不喜欢机器人
+- 你有电话号码吗？
+- 你住在哪里？
+- 阿克拉的猫怎么样？
+- 但我只是告诉你:(
+- 你为什么不回答？
+- 但你是一个英文网站:(
+- 你能帮我建一个机器人吗？

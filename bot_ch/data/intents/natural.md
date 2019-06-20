@@ -1,11 +1,8 @@
 ## intent:natural
-- [natural](features) setting
-- [natural](features) setting
-- I need to adjust [natural](features) settings
-- modify [natural](features) setting
-- change [natural](features)
-
+- 更[自然](声音特质)的声音的设定
+- 调到[自然](声音特质)
+- 变成[自然](声音特质)
 ## intent:what_natural
-- what is [natural](features)
-- what would be different if I change [natural](features) setting?
-- what controlled by [natural](features)?
+- 什么是[自然](声音特质)
+- [自然](声音特质)设定会带来什么不同
+- [自然](声音特质)控制了什么
