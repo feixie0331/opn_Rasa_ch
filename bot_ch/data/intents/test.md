@@ -1,4 +1,4 @@
 ## intent:test
-- test action
-- action testing
-- development testing
+- 研发测试
+- 检测
+- 实验

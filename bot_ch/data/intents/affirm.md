@@ -1,16 +1,11 @@
 ## intent:affirm
-- yes
-- yup
-- yo
-- ok
-- sure
-- good
-- correct
-- fine
-- its better
-- i like that
-- nice
-- indeed
-- of course
-- that sounds good
-- correct
+- 好
+- 没问题
+- 对的
+- 可以
+- 我喜欢
+- 好多了
+- 很帮哦
+- 当然咯
+- 正确
+- 听起来不错

@@ -1,56 +1,8 @@
 ## intent:thanks
-- thank you
-- thanks
-- Thanks
-- Thank you
-- Thank you so much
-- Thanks bot
-- Thanks for that
-- cheers
-- cheers bro
-- ok thanks!
-- perfect thank you
-- thanks a bunch for everything
-- thanks for the help
-- thanks a lot
-- amazing, thanks
-- cool, thanks
-- cool thank you
-- you helped a lot thank you
-- appreciate your help
-- cheers
-- thank you
-- thanks
-- thanks a lot
-- terrific thank you
-- great thank you
-- thanks so much
-- thank you so much
-- thanks for your help
-- thank you for your help
-- nice thank you
-- I appreciate it
-- I thank you
-- thank you that will be all
-- thanks buddy
-- thanks love
-- thank you my friend
-- well thanks
-- very good thank you
-- good thanks
-- thanks again
-- thank you again
-- all thank you
-- alright thank you
-- alright thanks
-- no thank you that's all
-- perfect thank you
-- so nice of you
-- well thank you
-- well thanks
-- thnx
-- thank you
-- thanx
-- thanks
-- thx
-- thank you
+- 谢谢你
+- 非常感谢
+- 谢谢
+- 谢啦
+- 感谢
+- 致谢
+- 感激不尽

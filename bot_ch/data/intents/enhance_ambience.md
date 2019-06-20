@@ -1,4 +1,4 @@
 ## intent:enhance_ambience
-- enhance ambience
-- more music
-- increase background
+- 增强环境音
+- 增强音乐
+- 增加背景音

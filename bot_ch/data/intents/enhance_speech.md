@@ -1,7 +1,7 @@
 ## intent:enhance_speech
-- can not understand
-- improve speech
-- voices are indistinct
-- many people talking simultaneously
-- hard to separate voices
-- can not distiguish voices
+- 听不懂
+- 提高讲话声音
+- 声音模糊不清
+- 很多人同时说话
+- 说话声很难被分开
+- 无法区分声音

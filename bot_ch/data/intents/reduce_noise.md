@@ -1,10 +1,7 @@
-## intent:greet
-- how are you
-
 ## intent:reduce_noise
-- its noisy
-- less music
-- too loud
-- remove noise
-- reduce background
-- background is too noisy
+- 很吵
+- 减弱背景音乐
+- 太吵
+- 消除噪音
+- 减弱背景音
+- 背景太吵

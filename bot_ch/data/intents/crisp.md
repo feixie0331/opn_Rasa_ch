@@ -1,11 +1,8 @@
 ## intent:crisp
-- [crisp](features) setting
-- [crisp](features) setting
-- I need to adjust [crisp](features) settings
-- modify [crisp](features) setting
-- change [crisp](features)
+- 调节[脆度](声音特质)
+- 我想要声音更[脆](声音特质)
+
 
 ## intent:what_crisp
-- what is [crisp](features)
-- what would be different if I change [crisp](features) setting?
-- what controlled by [crisp](features)?
+- [脆度](声音特质)是什么
+- 调节[脆度](声音特质)声音会发生什么变化

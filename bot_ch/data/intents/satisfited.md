@@ -1,103 +1,46 @@
 ## intent:satisfied
-- so cool
-- cool
-- that is good
-- glad to hear that
-- that's very nice of you
-- terrific
-- it's amazing
-- that's awesome
-- perfect
-- excellent
-- brilliant
-- that's great
-- it's good
-- it's great
-- fine
-- good
-- nice
-- that's fine
-- very good
-- amazing
-- fantastic
-- great
-- good very good
-- that's very good
-- really good
-- it is fine
-- it is good
-- it's great
-- it's perfect
-- much better
-- not bad
-- not too bad
-- it's very good
-- marvelous
-- that's nice
-- pleasant
-- pretty good
-- really nice
-- splendid
-- straight
-- super
-- super fantastic
-- sweet
-- really well
-- very well
-- that is awesome
-- that is nice
-- that is wonderful
-- that was amazing
-- that was awesome
-- that was cute
-- that was pretty good
-- that was very good
-- that's a good idea
-- that's a good thing
-- that's amazing
-- that's awesome thank you
-- that's better
-- that's cute
-- that's fantastic
-- that's much better
-- that's nice of you
-- that's not bad
-- that's perfect
-- that's pretty good
-- that's really good
-- that's really nice
-- that's sweet of you
-- that's very nice
-- that's wonderful
-- this is awesome
-- this is good
-- this is great
-- very nice
-- very then
-- wonderful
-- I'm glad to hear that
-- ok good
-- good for you
-- good to know
-- glad to hear it
-- so good
-- so nice of you
-- so sweet of you
-- it was good
-- oh well
-- good thing
-- that was good
-- it's awesome
-- okay good
-- it's fine
-- no it's okay
-- that's great
-- very nice
-- it's very good
-- that's fine
-- I think now is good
-- not bad
-- great!
-- great
-- awesome
-- yess
+- 非常酷
+- 很酷
+- 那很好
+- 很高兴听这样
+- 太棒了
+- 太奇妙了
+- 棒极了
+- 完美
+- 优秀
+- 很棒
+- 那很棒
+- 很好
+- 这很棒
+- 很好
+- 很好
+- 太好了
+- 没关系
+- 很好
+- 惊人
+- 太棒了
+- 好，很好
+- 这是非常好的
+- 真的很好
+- 没事
+- 这很好
+- 这很棒
+- 这是完美的
+- 好多了
+- 不错
+- 还不错
+- 这很好
+- 非常棒
+- 真好
+- 愉快
+- 非常好
+- 非常好
+- 灿烂
+- 直行
+- 超级
+- 超级棒极了
+- 甜蜜
+- 真的很好
+- 真的很好
+- 真的很好
+- 真的很好

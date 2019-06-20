@@ -1,51 +1,22 @@
 ## intent:Oticon_handoff
-- i want to talk to someone at Otican
-- i want to speak to a [manager](human_type)
-- I want to talk to the [founders](huamn_type)
-- [customer service](organization)
-- i want to speak to [customer service](organization)
-- someone from [customer care](organization)
-- can you forward me to your team
-- [service agent](organization)
-- id like to talk to a real [Oticon](organization) employee
-- can you please connect me to a real [Oticon](organization) employee?
-- are there also humans working for [your company](organization)?
+- 我想要跟助听器公司的工作人员联系
+- 我要跟跟助听器的一个真实员工讲话
+- 你们公司有真人在工作吗
+- 我要跟客服联系
 
 ## intent:audiologist_handoff_call
-- i want to talk to a [audiologist](human).
-- Could I talk to my [audiologist](human)?
-- can you forward me to my [audiologist](human).
-- someone from [clinic](organization)
+- 我想跟我的听力医生打电话
+- 我可以打电话跟我的医生吗
+- 你可以把我转接听力医生吗
 
 ## intent:audiologist_handoff_message
-- can you forward my message to my [audiologist](human_type)
-- send a note to the [clinique](organization)
-- contact my audiologist
-- tell the clinician
+- 你可以帮我把信息转给听力医生吗
+- 帮我联系听力医生
+- 告诉我的听力医生
 
 ## intent:human_handoff
-- I want to talk to a human
-- let me speak with a real person please
-- gimme a proper human
-- I don't wanna talk to a bot
-- Can I speak to anyone who can really help me?
-- I dont like to talk to a machine
-- give me a human now
-- that's annoying I'd like to speak to someone real
-- i would like to speak to a person
-- can you put me in touch with a human?
-- let me talk to a human
-- i dont wanna talk to a bot
-- talking to a bot is stupid
-- i want to talk to someone who is smarter than you
-- can i please speak to a human?
-- i'd rather speak with a real rasa employee
-- i want to talk to someone else
-- let me talk to a real person
-- please give me a human
-- i want to talk to a person
-- human handoff
-- give me a human
-- speak to a real person
-- i want to speak to a real person
-- wrong i want to speak to a human
+- 我想跟真人说话
+- 我宁愿跟真人说话
+- 可以跟真人讲话吗
+- 我要跟聪明人讲话
+- 我不想跟机器聊天

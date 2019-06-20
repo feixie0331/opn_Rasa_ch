@@ -50,9 +50,7 @@
 - ok bye
 - bye
 - bye
-- how are you?
-- how is it going?
-- what's up?
+
 
 ## intent:greet
 - hey
@@ -80,3 +78,6 @@
 - hi OPN
 - hi chatbot
 - how are you
+- how are you?
+- how is it going?
+- what's up?

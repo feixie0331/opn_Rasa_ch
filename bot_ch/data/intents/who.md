@@ -1,31 +1,17 @@
 ## intent:ask_competency
-- why are you here
-- what can you do
-- how can you help me
+- 你为什么在这
+- 你可以干什么
+- 你可以怎样帮我
 
 ## intent:ask_name
-- what is your name
-- who are you
-- tell me your name
-- what is your name
-- may I know your name
+- 你的名字是什么
+- 你是谁
+- 告诉我你的名字
+- 我可以知道你的名字吗
 
 ## intent:ask_personality
-- who are you
-- who made you
-- tell me about your personality
-- talk about yourself
-- tell me some stuff about you
-- talk some stuff about yourself
-- I want to know you better
-- I want to know more about you
-- tell me about yourself
-- tell me about you
-- about yourself
-- describe yourself
-- introduce yourself
-- say about you
-- what are you
-- define yourself
-- what is your personality
-- all about you
+- 请介绍你自己
+- 你是什么
+- 告诉我你的故事
+- 告诉我你的个性
+- 谁设计了你

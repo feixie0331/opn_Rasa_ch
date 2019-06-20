@@ -1,6 +1,5 @@
 ## intent:reduce_intensity
-- reduce intensity
-- too intense
-- less ambience
-- more natural
-- attenuate sounds
+- 降低声音强度
+- 声音太强烈
+- 更多自然的声音
+- 衰减声音

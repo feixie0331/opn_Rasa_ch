@@ -1,16 +1,8 @@
 ## intent:deny
-- no
-- nope
-- does not
-- does'nt
-- not really
-- not at all
-- its worse
-- i don't like that
-- awful
-- bad
-- never
-- I don't think so
-- don't like that
-- no way
-- not really
+- 不行
+- 不好
+- 不喜欢
+- 更差了
+- 不太行
+- 我不觉得
+- 没门
