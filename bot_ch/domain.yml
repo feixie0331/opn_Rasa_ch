@@ -192,9 +192,9 @@ templates:
   - text: try 'focused' to make sounds darker and less noisy ? do you prefer that
       in this situation ?
   utter_thanks:
-  - text: sure no problem.
-  - text: you are welcome.
-  - text: I am always here to help you.
+  - text: sure no problem. anything else I can do for you?
+  - text: you are welcome. What else can I help?
+  - text: I am always here to help you. do you need to change any other settings?
   utter_what:
   - text: i can help you adapt Opn to the context or contact your clinician by leaving
       a message.does your current setting work ok in this soundscape ?

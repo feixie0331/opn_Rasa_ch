@@ -3,6 +3,7 @@
 language: en
 pipeline:
 - name: "WhitespaceTokenizer"
+#- name: "JiebaTokenizer"
 - name: "RegexFeaturizer"
 - name: "CRFEntityExtractor"
 - name: "EntitySynonymMapper"

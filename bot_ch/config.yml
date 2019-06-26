@@ -1,9 +1,11 @@
 # Configuration for Rasa NLU.
 # https://rasa.com/docs/rasa/nlu/components/
-language: en
+
+language: zh
 pipeline:
-- name: "WhitespaceTokenizer"
-#- name: "RegexFeaturizer"
+- name: "JiebaTokenizer"
+#- name: "WhitespaceTokenizer"
+- name: "RegexFeaturizer"
 - name: "CRFEntityExtractor"
 - name: "EntitySynonymMapper"
 - name: "CountVectorsFeaturizer"
