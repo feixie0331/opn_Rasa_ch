@@ -6,6 +6,9 @@
 ## thanks over path
 * thanks
   - utter_thanks
+* thanks_over
+  - utter_thanks_over
+
 
 ## report path
 * report_problem
