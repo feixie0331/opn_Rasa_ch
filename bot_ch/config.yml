@@ -4,7 +4,6 @@
 language: zh
 pipeline:
 - name: "JiebaTokenizer"
-#- name: "WhitespaceTokenizer"
 - name: "RegexFeaturizer"
 - name: "CRFEntityExtractor"
 - name: "EntitySynonymMapper"
@@ -23,7 +22,21 @@ policies:
     fallback_nlu_action_name: "action_default_fallback"
     deny_suggestion_intent_name: "out_of_scope"
   - name: MemoizationPolicy
-  - name: KerasPolicy
+    max_history: 6
+#############################################
+#  - name: KerasPolicy
+#    featurizer:
+#    - name: MaxHistoryTrackerFeaturizer
+#      max_history: 5
+#      state_featurizer:
+#        - name: BinarySingleStateFeaturizer
+##############################################
+  - name: EmbeddingPolicy
+    epochs: 200
+    featurizer:
+      - name: FullDialogueTrackerFeaturizer
+        state_featurizer:
+          - name: LabelTokenizerSingleStateFeaturizer
   - name: FormPolicy
   - name: MappingPolicy
   

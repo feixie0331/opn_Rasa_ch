@@ -3,7 +3,6 @@
 language: en
 pipeline:
 - name: "WhitespaceTokenizer"
-#- name: "JiebaTokenizer"
 - name: "RegexFeaturizer"
 - name: "CRFEntityExtractor"
 - name: "EntitySynonymMapper"
@@ -22,8 +21,20 @@ policies:
     fallback_nlu_action_name: "action_default_fallback"
     deny_suggestion_intent_name: "out_of_scope"
   - name: MemoizationPolicy
+    max_history: 6
+# configuration for KerasPolicy
 #  - name: KerasPolicy
+#    featurizer:
+#    - name: MaxHistoryTrackerFeaturizer
+#      max_history: 6
+#      state_featurizer:
+#        - name: BinarySingleStateFeaturizer        
   - name: EmbeddingPolicy
+    epochs: 200
+    featurizer:
+    - name: FullDialogueTrackerFeaturizer
+      state_featurizer:
+        - name: LabelTokenizerSingleStateFeaturizer
   - name: FormPolicy
   - name: MappingPolicy
   
