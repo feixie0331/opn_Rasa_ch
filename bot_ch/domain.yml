@@ -8,7 +8,9 @@ actions:
 - utter_anything_else
 - utter_ask_rephrase
 - utter_ask_satisfication
+- utter_ask_configuration
 - utter_ask_user_name
+- utter_ask_continue
 - utter_botname
 - utter_call_audiologist
 - utter_cheer_up
@@ -40,13 +42,14 @@ actions:
 - utter_thanks_over
 - utter_what
 - utter_who
+
 entities:
-- features
+- feature
+
 intents:
 - affirm
 - deny
 - goodbye
-- satisfied
 - what_lively
 - report_problem
 - enhance_ambience
@@ -75,12 +78,23 @@ intents:
 - ask_name
 - ask_competency
 - out_of_scope
+- chitchat
 - test
+
 slots:
   user_name:
     type: unfeaturized
   userid:
     type: unfeaturized
+  satisfaction:
+    type: unfeaturized
+    auto_fill: false
+  configuration:
+    type: unfeaturized
+    auto_fill: false
+  requested_slot:
+    type: unfeaturized
+
 templates:
   utter_affirm:
   - text: awesome! i'll note you like that setting in this soundscape
@@ -93,10 +107,14 @@ templates:
   - text: does your selected setting work ok in this soundscape ?
   - text: is your current setting optimal in this environment ?
   - text: does your chosen setting function well in this context?
+  utter_ask_configuration:
+  - text: whats the challenge in this listening scenario ?
   utter_ask_user_name:
   - text: Can you tell me your name?
   - text: Can I have your name?
   - text: May I have your name?
+  utter_ask_continue:
+  - text: "do you want to continue?"
   utter_botname:
   - text: my name is i'm an Opn AI prototype.
   - text: Opn AI prototype.
@@ -215,3 +233,6 @@ templates:
   - text: i'm an AI prototype designed by oticon R&D. i can help you adapt Opn to
       the context or make a note to your clinician. does your chosen setting function
       well in this context?
+
+forms:
+  - program_form

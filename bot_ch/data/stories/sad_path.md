@@ -4,6 +4,3 @@
     - utter_botname
     - utter_who
     - utter_what
-
-
-

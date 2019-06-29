@@ -7,11 +7,13 @@
 
 # This is a simple example for a custom action which utters "Hello World!"
 import logging
-from typing import Any, Text, Dict, List
+from typing import Dict, Text, Any, List, Union, Optional
 #
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
+from rasa_sdk.forms import FormAction
+
 
 logger = logging.getLogger(__name__)
 
@@ -54,3 +56,60 @@ class ActionLeaveNote(Action):
         dispatcher.utter_template("utter_make_note", tracker)
         return []
 
+
+class ProgramForm(FormAction):
+    def name(self):
+        return "program_form"
+    
+    @staticmethod
+    def required_slots(tracker: Tracker) -> List[Text]:
+        return["satisfaction", "configuration"]
+
+    @staticmethod
+    def desciptors_db() -> List[Text]:
+        """Database of supported settings"""
+
+        return [
+            "crisp",
+            "lively",
+            "natural",
+            "focused",
+            "indian",
+            "occlusion",
+            "ambience",
+            "speech",
+            "brightness",
+            "intensity",
+            "noise",
+        ]
+
+
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        """A dictionary to map required slots to
+            - an extracted entity
+            - intent: value pairs
+            - a whole message
+            or a list of them, where a first match will be picked"""
+
+        return {
+            "configuration": self.from_entity(entity="feature", not_intent="chitchat"),
+#            "num_people": [
+#                self.from_entity(
+#                    entity="num_people", intent=["inform", "request_restaurant"]
+#                ),
+#                self.from_entity(entity="number"),
+#            ],
+            "satisfaction": [
+                self.from_intent(intent="affirm", value=True),
+                self.from_intent(intent="deny", value=False),
+            ],
+#            "preferences": [
+#                self.from_intent(intent="deny", value="no additional preferences"),
+#                self.from_text(not_intent="affirm"),
+#            ],
+#            "feedback": [self.from_entity(entity="feedback"), self.from_text()],
+        }
+
+    def submit(self):
+        dispatcher.utter_template('utter_affirm')
+        return[]
