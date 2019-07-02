@@ -6,11 +6,11 @@ actions:
 - action_leave_note
 - utter_affirm
 - utter_anything_else
+- utter_ask_configuration
+- utter_ask_continue
 - utter_ask_rephrase
 - utter_ask_satisfication
-- utter_ask_configuration
 - utter_ask_user_name
-- utter_ask_continue
 - utter_botname
 - utter_call_audiologist
 - utter_cheer_up
@@ -42,11 +42,14 @@ actions:
 - utter_thanks_over
 - utter_what
 - utter_who
-
 entities:
 - feature
-
+forms:
+- program_form
 intents:
+- greet
+- lively
+- out_of_scope
 - affirm
 - deny
 - goodbye
@@ -67,8 +70,6 @@ intents:
 - crisp
 - enhance_speech
 - focused
-- greet
-- lively
 - natural
 - occlusion
 - reduce_brightness
@@ -77,44 +78,61 @@ intents:
 - ask_personality
 - ask_name
 - ask_competency
-- out_of_scope
 - chitchat
 - test
-
 slots:
-  user_name:
-    type: unfeaturized
-  userid:
-    type: unfeaturized
-  satisfaction:
-    type: unfeaturized
-    auto_fill: false
   configuration:
-    type: unfeaturized
     auto_fill: false
+    type: unfeaturized
   requested_slot:
     type: unfeaturized
-
+  satisfaction:
+    auto_fill: false
+    type: unfeaturized
+  user_name:
+    type: text
+  userid:
+    type: text
+  crisp:
+    type: text
+  lively:
+    type: text
+  natural:
+    type: text
+  focused:
+    type: text
+  occlusion:
+    type: text
+  ambience:
+    type: text
+  speech:
+    type: text
+  brightness:
+    type: text
+  intensity:
+    type: text
+  noise:
+    type: text
 templates:
   utter_affirm:
   - text: awesome! i'll note you like that setting in this soundscape
   - text: great! i'll remember you prefer that setting in this context
   utter_anything_else:
   - text: Do you need any other help?
+  utter_ask_configuration:
+  - text: whats the challenge in this listening scenario ?
+  utter_ask_continue:
+  - text: do you want to continue?
   utter_ask_rephrase:
   - text: Could you please rephrase your last sentence?
   utter_ask_satisfication:
   - text: does your selected setting work ok in this soundscape ?
   - text: is your current setting optimal in this environment ?
   - text: does your chosen setting function well in this context?
-  utter_ask_configuration:
-  - text: whats the challenge in this listening scenario ?
   utter_ask_user_name:
   - text: Can you tell me your name?
   - text: Can I have your name?
   - text: May I have your name?
-  utter_ask_continue:
-  - text: "do you want to continue?"
   utter_botname:
   - text: my name is i'm an Opn AI prototype.
   - text: Opn AI prototype.
@@ -157,7 +175,8 @@ templates:
   - text: "'focused' reduces noise and sounds warmer but provides less speeech  enhancement;\
       \ do you prefer 'focused' in this listening scenario ?"
   utter_focused_change:
-  - text: It help you to reduce the background noise, that you can focus more on the target you are listening to. Would you like to try this out?
+  - text: It help you to reduce the background noise, that you can focus more on the
+      target you are listening to. Would you like to try this out?
   utter_goodbye:
   - text: Bye
   - text: Goodbye!
@@ -168,7 +187,6 @@ templates:
   - text: heey i'm an Opn AI prototype.
   - text: hi i'm an Opn AI prototype.
   - text: hello i'm an Opn AI prototype.
-
   utter_human_to_contact:
   - text: Do you want to talk to your Audiologist or Oticon?
   utter_lively:
@@ -180,7 +198,8 @@ templates:
   - text: i'll make a note of this for your clinician.
   - text: i'll leave a message about this for your clinician
   utter_natural:
-  - text: "'natural' attenuates noise but sounds less bright and intense; do you prefer 'natural' in this listening scenario ?"
+  - text: "'natural' attenuates noise but sounds less bright and intense; do you prefer\
+      \ 'natural' in this listening scenario ?"
   utter_natural1_change:
   - text: Reduce the sharpness of the sound you hear. Would you like to try this out?
   utter_natural2_change:
@@ -213,11 +232,8 @@ templates:
   - text: sure no problem. anything else I can do for you?
   - text: you are welcome. What else can I help?
   - text: my pleasure. do you need to change any other settings?
-
   utter_thanks_over:
   - text: I am always here to help you.
-
-
   utter_what:
   - text: i can help you adapt Opn to the context or contact your clinician by leaving
       a message.does your current setting work ok in this soundscape ?
@@ -233,6 +249,3 @@ templates:
   - text: i'm an AI prototype designed by oticon R&D. i can help you adapt Opn to
       the context or make a note to your clinician. does your chosen setting function
       well in this context?
-
-forms:
-  - program_form

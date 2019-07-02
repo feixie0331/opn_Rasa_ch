@@ -1,0 +1,7 @@
+2019-06-30 18:24:17,801 [ERROR]  Unable to start server
+Traceback (most recent call last):
+  File "d:\python\envs\thesis\lib\site-packages\sanic\server.py", line 745, in serve
+    http_server = loop.run_until_complete(server_coroutine)
+  File "d:\python\envs\thesis\lib\asyncio\base_events.py", line 582, in run_until_complete
+    raise RuntimeError('Event loop stopped before Future completed.')
+RuntimeError: Event loop stopped before Future completed.

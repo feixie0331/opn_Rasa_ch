@@ -18,8 +18,10 @@
 * goodbye
   - utter_goodbye
 
-## test path
+
+## test form path
 * test
-  - action_fetch_UserId
-  - slot{"userid" : "basic"}
   - action_hello_world
+  - program_form
+  - form{"name": "program_form"}
+  - form{"name": null}

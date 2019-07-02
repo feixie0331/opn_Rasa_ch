@@ -62,8 +62,21 @@ class ProgramForm(FormAction):
         return "program_form"
     
     @staticmethod
-    def required_slots(tracker: Tracker) -> List[Text]:
+    def required_slots(tracker: Tracker) -> List[Text]:        
         return["satisfaction", "configuration"]
+
+    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
+        return {
+            "configuration": [
+                self.from_entity(entity="feature", intent=["lively", "enhance_ambience"]),
+                self.from_intent(intent="affirm", value=True),
+                self.from_intent(intent="deny", value=False),
+                ],
+            "satisfaction": [
+                self.from_intent(intent="affirm", value=True),
+                self.from_intent(intent="deny", value=False),
+                 ],
+                 }
 
     @staticmethod
     def desciptors_db() -> List[Text]:
@@ -84,31 +97,7 @@ class ProgramForm(FormAction):
         ]
 
 
-    def slot_mappings(self) -> Dict[Text, Union[Dict, List[Dict]]]:
-        """A dictionary to map required slots to
-            - an extracted entity
-            - intent: value pairs
-            - a whole message
-            or a list of them, where a first match will be picked"""
 
-        return {
-            "configuration": self.from_entity(entity="feature", not_intent="chitchat"),
-#            "num_people": [
-#                self.from_entity(
-#                    entity="num_people", intent=["inform", "request_restaurant"]
-#                ),
-#                self.from_entity(entity="number"),
-#            ],
-            "satisfaction": [
-                self.from_intent(intent="affirm", value=True),
-                self.from_intent(intent="deny", value=False),
-            ],
-#            "preferences": [
-#                self.from_intent(intent="deny", value="no additional preferences"),
-#                self.from_text(not_intent="affirm"),
-#            ],
-#            "feedback": [self.from_entity(entity="feedback"), self.from_text()],
-        }
 
     def submit(self):
         dispatcher.utter_template('utter_affirm')

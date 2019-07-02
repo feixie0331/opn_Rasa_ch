@@ -23,7 +23,6 @@ policies:
     deny_suggestion_intent_name: "out_of_scope"
   - name: MemoizationPolicy
     max_history: 6
-  - name: FormPolicy
 #############################################
 #  - name: KerasPolicy
 #    featurizer:
@@ -38,5 +37,6 @@ policies:
       - name: FullDialogueTrackerFeaturizer
         state_featurizer:
           - name: LabelTokenizerSingleStateFeaturizer
+  - name: FormPolicy
   - name: MappingPolicy
   
