@@ -54,3 +54,17 @@ class ActionLeaveNote(Action):
         dispatcher.utter_template("utter_make_note", tracker)
         return []
 
+class action_default_ask_affirmation(Action):
+    def name(self):
+        return "action_default_ask_affirmation"
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+        """Define what the form has to do
+            after all required slots are filled"""       
+        dispatcher.utter_message("Sorry I can't get it. you can try phrases like 'enhance ambience'，'hard to separate voice', 'too sharp'，'too intense','too noisy'")
+        # utter submit template
+        return []
