@@ -1,0 +1,50 @@
+[
+  {
+    "text": "Feel that people are mumbling",
+    "intent": "increse_soft_gain",
+    "intent_prediction": {
+      "name": "increse_bright",
+      "confidence": 0.8341758251190186
+    }
+  },
+  {
+    "text": "good",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "satisfied",
+      "confidence": 0.7823261022567749
+    }
+  },
+  {
+    "text": "fine",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "satisfied",
+      "confidence": 0.9029967188835144
+    }
+  },
+  {
+    "text": "nice",
+    "intent": "affirm",
+    "intent_prediction": {
+      "name": "satisfied",
+      "confidence": 0.8224987983703613
+    }
+  },
+  {
+    "text": "who are you",
+    "intent": "ask_name",
+    "intent_prediction": {
+      "name": "ask_personality",
+      "confidence": 0.6810948848724365
+    }
+  },
+  {
+    "text": "so nice of you",
+    "intent": "thanks",
+    "intent_prediction": {
+      "name": "satisfied",
+      "confidence": 0.843023419380188
+    }
+  }
+]

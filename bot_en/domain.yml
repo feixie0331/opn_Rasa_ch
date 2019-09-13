@@ -4,6 +4,7 @@ actions:
 - action_fetch_UserId
 - action_hello_world
 - action_leave_note
+- action_fetch_labels
 - utter_affirm
 - utter_anything_else
 - utter_ask_rephrase
@@ -12,8 +13,6 @@ actions:
 - utter_botname
 - utter_call_audiologist
 - utter_cheer_up
-- utter_crisp
-- utter_crisp_change
 - utter_deny
 - utter_did_that_help
 - utter_email_audiologist
@@ -25,21 +24,27 @@ actions:
 - utter_greet
 - utter_happy
 - utter_human_to_contact
-- utter_lively
-- utter_lively_change
 - utter_make_note
-- utter_natural
-- utter_natural1_change
-- utter_natural2_change
-- utter_occlusion
 - utter_octicon
 - utter_out_of_scope
-- utter_reduce_brightness
-- utter_reduce_intensity
 - utter_reduce_noise
 - utter_thanks
 - utter_what
 - utter_who
+- utter_this_is_bright
+- utter_this_is_soft_gain
+- utter_this_is_MPO
+- utter_increase_MPO
+- utter_decrease_MPO
+- utter_decrease_general_gain
+- utter_troubleshooting
+- utter_increase_soft_gain
+- utter_decrease_soft_gain
+- utter_reduce_bright
+- utter_noise_reduction_off
+- utter_increase_bright
+- utter_frontal_focus
+
 entities:
 - features
 intents:
@@ -47,41 +52,84 @@ intents:
 - deny
 - goodbye
 - satisfied
-- what_lively
 - report_problem
-- enhance_ambience
 - thanks
-- mood_great
-- mood_unhappy
-- what_focused
-- what_crisp
-- what_natural
 - human_handoff
 - Oticon_handoff
 - audiologist_handoff_message
 - audiologist_handoff_call
-- crisp
-- enhance_speech
-- focused
 - greet
-- lively
-- natural
-- echo
-- occlusion
-- reduce_brightness
-- reduce_intensity
-- reduce_noise
 - ask_personality
 - ask_name
 - ask_competency
 - out_of_scope
 - test
+- increase_soft_gain
+- decrease_soft_gain
+- what_is_soft_gain
+- increase_bright
+- reduce_bright
+- reduce_MPO
+- troubleshooting
+- enhance_ambience
+- what_is_MPO
+- what_is_bright
 slots:
   user_name:
     type: unfeaturized
   userid:
     type: unfeaturized
+  label:
+    type: categorical
+    values:
+        - lecture listening to speech
+        - meeting room work meeting
+        - home just me
+        - kitchen meal time
 templates:
+  utter_selected:
+    - text: 
+  utter_this_is_bright:
+    - text: Brightness changes your perception in mid to high frequencies sounds. Increse brightness can help you to understand more consonants. However, too much brightness may cause sounds become too sharp. Would you like to try this out?
+  utter_this_is_soft_gain:
+    - text: Soft gain changes the gain on soft sounds. More soft sounds can enhance speech recognition. Too much soft sounds may require too much efforts for process. Would you like to try?
+  utter_increase_bright: 
+  - text: I see. It seems because the mid high frequency gain too low, I will increase the brightness for better distinguish contrasts in speech.
+  utter_increase_soft_gain: 
+  - text: emmm, I think maybe because gain on soft sounds is too low, I will increase the setting of soft gain control. 
+  utter_reduce_bright: 
+  - text: Don't worry, that maybe because the brightness is too high, I will reduce the setting of the bright perception control.
+  utter_decrease_soft_gain: 
+  - text: Calm down, I can help you to reduce the setting of the soft gain control, in order to get perceive less soft sounds.
+  utter_troubleshooting: 
+  - text: Sorry to hear that, I can't help with this right away. I will inform your audiologist immediately.
+  - text: hmmm sounds like you might benefit from a more open type of speaker dome. I will inform your audiologist immediately.
+  utter_this_is_MPO: 
+  - text: MPO relates to the maximum output of the OPN. If you expect OPN to be louder, that means MPO is too low. 
+  utter_increase_MPO:
+  - text: Got it! Would you like to try tuning on a bit MPO setting?
+  utter_decrease_MPO:
+  - text: Let's turn down MPO to getter lower volumn.
+  utter_reduce_MPO:
+  - text: It's a pity. I will turn down the MPO setting, would you like to try?
+  utter_enhance_ambience:
+  - text: try increase omnidirectionality in order to shift attention to enhance ambient sounds ? is that in this context ?
+  - text: try increase omnidirectionality to increase sounds from all around ? do you prefer that in
+      this situation ?
+  utter_reduce_noise:
+  - text: try attenuate the directional and diffuse noise to reduce background noise ? is that better in
+      this context ?
+  - text: try attenuate the directional and diffuse noise to make the environment less noisy ? do you prefer that
+      in this situation ?
+  utter_frontal_focus:
+    - text: You can try to only focus on the front to get rid of the noises.
+  utter_noise_reduction_off:
+  - text: I can turn off the noise reduction controller. Do you think it getting better?
+  utter_decrease_general_gain:
+    - text: How about turing down the volumn?
+
+
+  
   utter_affirm:
   - text: awesome! i'll note you like that setting in this soundscape
   - text: great! i'll remember you prefer that setting in this context
@@ -126,12 +174,9 @@ templates:
   - text: Did that help you?
   utter_email_audiologist:
   - text: Sure, I will send this issue to your audiologist.
-  utter_enhance_ambience:
-  - text: try 'lively' to enhance ambient sounds ? is that in this context ?
-  - text: try 'lively' to increase sounds from all around ? do you prefer that in
-      this situation ?
+  
   utter_enhance_speech:
-  - text: try 'crisp' to make sounds more bright and intense ? is that better in this
+  - text: try  to make sounds more bright and intense ? is that better in this
       context ?
   - text: try 'crisp' to increase brightness and add more detail ? do you prefer that
       in this situation ?
@@ -154,22 +199,10 @@ templates:
   - text: Great carry on!
   utter_human_to_contact:
   - text: Do you want to talk to your Audiologist or Oticon?
-  utter_lively:
-  - text: "'lively' offers more ambient sounds and sounds brighter and more intense;\
-      \ do you prefer 'lively' in this listening scenario ?"
-  utter_lively_change:
-  - text: This will improve the background sound. Would you like to try this out?
   utter_make_note:
   - text: i'll make a note of this for your clinician.
   - text: i'll leave a message about this for your clinician
-  utter_natural:
-  - text: "'natural' attenuates noise but sounds less bright and intense; do you prefer 'natural' in this listening scenario ?"
-  utter_natural1_change:
-  - text: Reduce the sharpness of the sound you hear. Would you like to try this out?
-  utter_natural2_change:
-  - text: Reduce the xxxxxx of the sound you hear. Would you like to try this out?
-  utter_occlusion:
-  - text: hmmm sounds like you might benefit from a more open type of speaker dome
+  
   utter_octicon:
   - text: Sure, i will leave a message to oticon customer service.
   utter_out_of_scope:
@@ -178,20 +211,6 @@ templates:
   - text: I can't help you with that, I'm sorry.
   - text: Even a Rasa bot is not completely perfect - it seems like I can't handle
       that request.
-  utter_reduce_brightness:
-  - text: try 'natural' which sounds less bright ? is that better in this context?
-  - text: try 'natural' which is less sharp ? do you prefer that in this situation
-      ?
-  utter_reduce_intensity:
-  - text: try 'natural' to balance sounds and make them less intense ? is that better
-      in this context ?
-  - text: try 'natural' to reduce ambient sounds and intensity ? do you prefer that
-      in this situation ?
-  utter_reduce_noise:
-  - text: try 'focused' to zoom out and reduce background noise ? is that better in
-      this context ?
-  - text: try 'focused' to make sounds darker and less noisy ? do you prefer that
-      in this situation ?
   utter_thanks:
   - text: sure no problem.
   - text: you are welcome.

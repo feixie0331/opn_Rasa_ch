@@ -1,6 +1,15 @@
-## intent:occlusion
-- [occlusion](features) setting
-- [occlusion](features) setting
-- I need to adjust [occlusion](features) settings
-- modify [occlusion](features) setting
-- change [occlusion](features)
+## intent:troubleshooting
+- It sounds like I'm in a barrel
+- It sounds like I'm in a tunnel
+- It sounds like I'm in a well
+- I feel like my head is down in a barrel
+- I feel like I am standing in a tunnel
+- I feel like my head is down in a well.
+- My hearing aid sounds hollow
+- My hearing aid has an echo
+- My ear feels plugged
+- My own voice echoes
+- own voice strange
+- own voice as if I am having a cold
+- Hearing aid has fluttered sounds
+- Hearing aid is intermittent

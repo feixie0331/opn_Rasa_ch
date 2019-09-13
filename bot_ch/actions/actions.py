@@ -13,7 +13,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from rasa_sdk.forms import FormAction
-
+import requests
 
 logger = logging.getLogger(__name__)
 
@@ -102,3 +102,12 @@ class ProgramForm(FormAction):
     def submit(self):
         dispatcher.utter_template('utter_affirm')
         return[]
+
+
+
+class FetchProfileAction(Action):
+    def name(self):
+        return "action_fetch_labels"
+
+    def run(self, dispatcher, tracker, domain):
+        return [SlotSet("environment", "kitchen"),SlotSet("soundintent", "meeting")]

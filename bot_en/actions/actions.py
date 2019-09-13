@@ -13,6 +13,8 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 
+import csv
+
 logger = logging.getLogger(__name__)
 
 #
@@ -53,4 +55,18 @@ class ActionLeaveNote(Action):
         # utter submit template
         dispatcher.utter_template("utter_make_note", tracker)
         return []
+
+class FetchProfileAction(Action):
+    def name(self):
+        return "action_fetch_labels"
+
+    def run(self, dispatcher, tracker, domain):
+ #       with open("labels.csv")as csv_file:
+ #           csv_reader = csv.reader(csv_file, delimiter=',')
+ #           for row in csv_reader:
+ #               SlotSet("label", row)
+                
+#        dispatcher.utter_template("utter_selected",tracker)
+
+        return [SlotSet("label", "meeting room work meeting")]
 

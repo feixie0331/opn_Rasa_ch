@@ -1,39 +1,24 @@
-## lively affirm path
-* lively
-  - utter_lively
-* affirm
-  - utter_affirm
-
-## lively deny path
-* lively
-  - utter_lively
-* deny
-  - utter_deny
-
-## enhance ambience path affirm
+## enhance ambience_path_affirm
 * enhance_ambience
   - utter_enhance_ambience
 * affirm
   - utter_affirm
 
-## enhance ambience path deny
+## enhance ambience path deny_first
 * enhance_ambience
   - utter_enhance_ambience
 * deny
-  - utter_deny
-
-## enhance ambience explain path affirm
-* enhance_ambience
-  - utter_enhance_ambience
-* what_lively
-  - utter_lively_change
+  - utter_noise_reduction_off
 * affirm
   - utter_affirm
 
-## enhance ambience explain path deny
+## enhance ambience path deny_first
 * enhance_ambience
   - utter_enhance_ambience
-* what_lively
-  - utter_lively_change
 * deny
-  - utter_deny
+  - utter_noise_reduction_off
+* deny
+  - utter_troubleshooting
+* thanks
+ - utter_thanks
+

@@ -1,6 +1,7 @@
 %YAML 1.1
 ---
 actions:
+- action_fetch_labels
 - action_fetch_UserId
 - action_hello_world
 - action_leave_note
@@ -42,6 +43,8 @@ actions:
 - utter_thanks_over
 - utter_what
 - utter_who
+- utter_environment
+- utter_soundintent
 entities:
 - feature
 forms:
@@ -79,6 +82,8 @@ intents:
 - ask_name
 - ask_competency
 - chitchat
+- confirm_environment
+- confirm_soundintent
 - test
 slots:
   configuration:
@@ -88,7 +93,18 @@ slots:
     type: unfeaturized
   satisfaction:
     auto_fill: false
-    type: unfeaturized
+    type: bool
+  environment:
+    type: categorical
+      values:
+      - kitchen
+      - meeting room
+  soundintent:
+    type: categorical
+      values:
+      - meeting
+      - lecture
+      - conversation
   user_name:
     type: text
   userid:
@@ -249,3 +265,8 @@ templates:
   - text: i'm an AI prototype designed by oticon R&D. i can help you adapt Opn to
       the context or make a note to your clinician. does your chosen setting function
       well in this context?
+  utter_environment:
+    - text: "Where are you now?"
+    - text: "Can you tell me what environment are you in?"
+  utter_soundintent:
+    - text: "What intent do you choose?"

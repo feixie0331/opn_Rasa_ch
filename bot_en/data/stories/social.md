@@ -1,7 +1,14 @@
-## greet path
+## greet path enhance speech
 * greet
-  - utter_greet
-  - utter_ask_satisfication
+  - action_fetch_labels
+  - slot{"label":"meeting room work meeting"}
+  - utter_enhance_speech
+
+## greet path reduce
+* greet
+  - action_fetch_labels
+  - slot{"label":"lecture listening to speech"}
+  - utter_focused
 
 ## thanks path
 * thanks
@@ -20,21 +27,3 @@
   - action_fetch_UserId
   - slot{"userid" : "basic"}
   - action_hello_world
-
-## Generated Story 8511563781940770780
-* report_problem
-    - utter_deny
-* enhance_ambience
-    - utter_enhance_ambience
-* what_lively{"features": "lively"}
-    - utter_lively_change
-* deny
-    - rewind
-* affirm
-    - utter_anything_else
-* satisfied
-    - utter_affirm
-* thanks
-    - utter_thanks
-* goodbye
-    - utter_goodbye
