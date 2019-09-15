@@ -3,7 +3,6 @@
 - cool
 - that is good
 - glad to hear that
-- that's very nice of you
 - terrific
 - it's amazing
 - that's awesome

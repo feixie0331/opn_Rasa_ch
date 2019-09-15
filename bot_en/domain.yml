@@ -44,6 +44,7 @@ actions:
 - utter_noise_reduction_off
 - utter_increase_bright
 - utter_frontal_focus
+- utter_reduce_MPO
 
 entities:
 - features
@@ -154,7 +155,7 @@ templates:
   utter_cheer_up:
   - text: 'Here is something to cheer you up:'
   utter_crisp:
-  - text: "'crisp' amplifies soft sounds and make them very bright to enhance consonants;\
+  - text: " Because you are having a meeting in meeting room, I suggest you to try 'crisp' amplifies soft sounds and make them very bright to enhance consonants;\
       \ do you prefer 'crisp' in this listening scenario ?"
   utter_crisp_change:
   - text: This will help you perceive voice better. Would you like to try this out?
@@ -192,9 +193,9 @@ templates:
   - text: Ciao!
   - text: Bye, was nice talking to you!
   utter_greet:
-  - text: heey i'm an Opn AI prototype.
-  - text: hi i'm an Opn AI prototype.
-  - text: hello i'm an Opn AI prototype.
+  - text: heey i'm an Opn AI prototype. I can help you to find optimal settings. Tell me your difficulties in this environment.
+  - text: hi i'm an Opn AI prototype. I can guide you to find optimal settings. Tell me the problem you are facing.
+  - text: hello i'm an Opn AI prototype. Tell me what you want to complaint.
   utter_happy:
   - text: Great carry on!
   utter_human_to_contact:

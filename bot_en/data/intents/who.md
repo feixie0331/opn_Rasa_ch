@@ -5,7 +5,6 @@
 
 ## intent:ask_name
 - what is your name
-- who are you
 - tell me your name
 - what is your name
 - may I know your name

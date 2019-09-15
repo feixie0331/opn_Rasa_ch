@@ -1,22 +1,20 @@
-## greet path enhance speech
-* greet
+## deny path enhance speech
+* deny
   - action_fetch_labels
   - slot{"label":"meeting room work meeting"}
   - utter_enhance_speech
 
-## greet path reduce
-* greet
+## deny path_focus
+* deny
   - action_fetch_labels
   - slot{"label":"lecture listening to speech"}
   - utter_focused
+
 
 ## thanks path
 * thanks
   - utter_thanks
 
-## report path
-* report_problem
-  - utter_deny
 
 ## say goodbye
 * goodbye

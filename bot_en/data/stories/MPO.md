@@ -1,6 +1,8 @@
 
 
 ## decrease_MPO affirm path
+* greet
+  - utter_greet
 * reduce_MPO
  - utter_decrease_MPO
  - utter_ask_satisfication
@@ -9,7 +11,9 @@
 * thanks
  - utter_happy
 
-## decrease_brightness deny first path
+## decrease_MPO deny first path
+* greet
+  - utter_greet
 * reduce_MPO
  - utter_decrease_MPO
  - utter_ask_satisfication
@@ -21,6 +25,8 @@
 
 
 ## decrease_brightness deny second path
+* greet
+  - utter_greet
 * reduce_bright
  - utter_reduce_bright
  - utter_ask_satisfication
@@ -32,9 +38,11 @@
 * thanks
   - utter_make_note
 
-## ask_what_is_brightness path
-* reduce_bright
- - utter_reduce_bright
+## ask_what_is_MPO path
+* greet
+  - utter_greet
+* reduce_MPO
+ - utter_reduce_MPO
  - utter_ask_satisfication
-* what_is_bright
- - utter_this_is_bright
+* what_is_MPO
+ - utter_this_is_MPO
