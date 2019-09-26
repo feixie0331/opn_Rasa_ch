@@ -1,22 +1,176 @@
-%YAML 1.1
----
+intents:
+- affirm
+- deny
+- goodbye
+- satisfied
+- report_problem
+- thanks
+- human_handoff
+- Oticon_handoff
+- audiologist_handoff_message
+- audiologist_handoff_call
+- greet
+- ask_personality
+- ask_name
+- ask_competency
+- out_of_scope
+- test
+- increase_soft_gain
+- decrease_soft_gain
+- what_is_soft_gain
+- increase_bright
+- reduce_bright
+- reduce_MPO
+- troubleshooting
+- enhance_ambience
+- what_is_MPO
+- what_is_bright
+entities:
+- features
+slots:
+  label:
+    type: categorical
+    values:
+    - lecture listening to speech
+    - meeting room work meeting
+    - home just me
+    - kitchen meal time
+  user_name:
+    type: unfeaturized
+  userid:
+    type: unfeaturized
+templates:
+  utter_selected:
+  - text:
+  utter_this_is_bright:
+  - text: 亮度会改变您对中高频声音的感知。 增加亮度可以帮助您了解更多辅音。 但是，亮度过高可能会导致声音变得过于尖锐。 您想尝试一下吗？(Brightness
+      changes your perception in mid to high frequencies sounds. Increse brightness
+      can help you to understand more consonants. However, too much brightness may
+      cause sounds become too sharp. Would you like to try this out?)
+  utter_this_is_soft_gain:
+  - text: 柔和增益会改变柔和声音的增益。 更多柔和的声音可以增强语音识别能力。更多柔和的声音可能需要更多精力來识别。 你想试一下吗？(Soft gain
+      changes the gain on soft sounds. More soft sounds can enhance speech recognition.
+      Too much soft sounds may require too much efforts for process. Would you like
+      to try?)
+  utter_increase_bright:
+  - text: 我懂了。 似乎由于中高频增益太低，我将增加亮度以更好地区分语音中的对比度(I see. It seems because the mid high
+      frequency gain too low, I will increase the brightness for better distinguish
+      contrasts in speech).
+  utter_increase_soft_gain:
+  - text: 嗯，我想也许是因为柔和声音的增益太低，所以我会增加柔和增益控制的设置。(emmm, I think maybe because gain on
+      soft sounds is too low, I will increase the setting of soft gain control. )
+  utter_reduce_bright:
+  - text: 不用担心，因为声音明亮度太高，我会减少明亮感控制的设置。(Don't worry, that maybe because the brightness
+      is too high, I will reduce the setting of the bright perception control.)
+  utter_decrease_soft_gain:
+  - text: 别着急，我可以帮助您减少软增益控制的设置，以减少感知到的柔和声音。(Calm down, I can help you to reduce the
+      setting of the soft gain control, in order to get perceive less soft sounds.)
+  utter_troubleshooting:
+  - text: 很抱歉发生这样的问题，这类问题通常因为助听器设备有损坏，我没有办法立刻处理。但我会尽快联系你的医生。(Sorry to hear that, I
+      can't help with this right away. I will inform your audiologist immediately.)
+  utter_this_is_MPO:
+  - text: MPO与OPN的最大输出有关。 如果您希望OPN声音更大，则表示MPO太低。(MPO relates to the maximum output
+      of the OPN. If you expect OPN to be louder, that means MPO is too low. )
+  utter_increase_MPO:
+  - text: 我明白了，來试试调高MPO。现在感觉怎么样？(Got it! Would you like to try tuning on a bit MPO
+      setting?)
+  utter_decrease_MPO:
+  - text: 來试试调低MPO得到更低的音量，现在更满意了吗(Let's turn down MPO to getter lower volumn.)
+  utter_reduce_MPO:
+  - text: 我会尝试调低MPO的设定，你觉得更满意了吗？(It's a pity. I will turn down the MPO setting, would
+      you like to try?)
+  utter_enhance_ambience:
+  - text: 尝试增加全向性以转移注意力以增强环境声音吗？ 这样的调节有帮助吗？(try increase omnidirectionality in order
+      to shift attention to enhance ambient sounds ? is that in this context ?)
+  utter_reduce_noise:
+  - text: 尝试衰减方向性和扩散性噪声以减少背景噪声？ 这样的改变更令你满意吗？(try attenuate the directional and diffuse
+      noise to reduce background noise ? is that better in this context ?)
+  utter_frontal_focus:
+  - text: 您可以尝试只专注于前面以消除噪音(You can try to only focus on the front to get rid of the
+      noise.)
+  utter_noise_reduction_off:
+  - text: 我可以关闭降噪控制器。 是不是感觉好一点了呢？(I can turn off the noise reduction controller. Do
+      you think it getting better?)
+  utter_decrease_general_gain:
+  - text: 试试调低音量怎么样？ 觉得舒服些了吗？
+  utter_affirm:
+  - text: 那就好！我会记录下来在这个情景下你的喜好。
+  utter_anything_else:
+  - text: 需要其他的帮助吗？
+  utter_ask_rephrase:
+  - text: 能重新说一下您的问题吗？
+  utter_ask_satisfication:
+  - text: 对当前情景下的助听器设定还满意吗？
+  utter_ask_user_name:
+  - text: Can you tell me your name?
+  - text: Can I have your name?
+  - text: May I have your name?
+  utter_botname:
+  - text: 我的名字是Opn 人工智能机器人
+  utter_call_audiologist:
+  - text: OK I will call your audiologist now.
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+  utter_crisp:
+  - text: " Because you are having a meeting in meeting room, I suggest you to try\
+      \ 'crisp' amplifies soft sounds and make them very bright to enhance consonants;\
+      \ do you prefer 'crisp' in this listening scenario ?"
+  utter_crisp_change:
+  - text: This will help you perceive voice better. Would you like to try this out?
+  utter_default:
+  - text: 对不起，我没听明白。可以重复一边吗。
+  utter_deny:
+  - text: 还是不满意？ 來描述一下你听到的有什么问题吧。
+  utter_did_that_help:
+  - text: 这样可以解决你的问题吗
+  utter_email_audiologist:
+  - text: 好的，我会将你的问题告诉医生
+  utter_enhance_speech:
+  - text: 试试声音更明亮并且引入更多柔软的细节？感觉更对话更清晰了吗？(try  to make sounds more bright and intense
+      ? is that better in this context ?)
+  utter_focused:
+  - text: “专注”可降低噪音并听起来更温暖，但对语音的增强作用较小； 在这种聆听场景中，您更喜欢“专注”吗？('focused' reduces noise
+      and sounds warmer but provides less speeech  enhancement; do you prefer 'focused'
+      in this listening scenario ?)
+  utter_focused_change:
+  - text: 它可以帮助您减少背景噪音，使您可以将更多的注意力集中在正在听的目标上。 您想尝试一下吗？(It help you to reduce the background
+      noise, that you can focus more on the target you are listening to. Would you
+      like to try this out?)
+  utter_goodbye:
+  - text: 再见
+  - text: 下次见
+  utter_greet:
+  - text: 你好，我是Opn 人工智能机器人原型。我可以帮你调节助听器达到最理想的效果。告诉我你现在面临的问题。(heey i'm an Opn AI prototype.
+      I can help you to find optimal settings. Tell me your difficulties in this environment.)
+  utter_human_to_contact:
+  - text: 你想要联系医生或者Oticon公司吗
+  utter_make_note:
+  - text: 我将告知你的医生
+  utter_octicon:
+  - text: 好的，我将发送信息到oticon的客户服务部门。
+  utter_out_of_scope:
+  - text: 很抱歉，目前我无法解决这个问题。我是由Oticon公司设计的AI机器人原型，我可以根据周围环境和你的需求调节助听器，并且可以转达给你的医生。现在你的助听器设定还令你满意吗？
+  utter_thanks:
+  - text: 没问题
+  - text: 不用谢
+  - text: 需要帮助就告诉我:)
+  utter_what:
+  - text: 我可以根据周围环境和你的需求调节助听器，并且可以转达给你的医生。现在你的助听器设定还令你满意吗？
+  utter_who:
+  - text: 我是由Oticon公司设计的AI机器人原型，我可以根据周围环境和你的需求调节助听器，并且可以转达给你的医生。现在你的助听器设定还令你满意吗？
 actions:
-- action_fetch_labels
 - action_fetch_UserId
 - action_hello_world
 - action_leave_note
+- action_fetch_labels
 - utter_affirm
 - utter_anything_else
-- utter_ask_configuration
-- utter_ask_continue
 - utter_ask_rephrase
 - utter_ask_satisfication
 - utter_ask_user_name
 - utter_botname
 - utter_call_audiologist
 - utter_cheer_up
-- utter_crisp
-- utter_crisp_change
 - utter_deny
 - utter_did_that_help
 - utter_email_audiologist
@@ -27,246 +181,24 @@ actions:
 - utter_goodbye
 - utter_greet
 - utter_human_to_contact
-- utter_lively
-- utter_lively_change
 - utter_make_note
-- utter_natural
-- utter_natural1_change
-- utter_natural2_change
-- utter_occlusion
 - utter_octicon
 - utter_out_of_scope
-- utter_reduce_brightness
-- utter_reduce_intensity
 - utter_reduce_noise
 - utter_thanks
-- utter_thanks_over
 - utter_what
 - utter_who
-- utter_environment
-- utter_soundintent
-entities:
-- feature
-forms:
-- program_form
-intents:
-- greet
-- lively
-- out_of_scope
-- affirm
-- deny
-- goodbye
-- what_lively
-- report_problem
-- enhance_ambience
-- thanks
-- thanks_over
-- mood_great
-- mood_unhappy
-- what_focused
-- what_crisp
-- what_natural
-- human_handoff
-- Oticon_handoff
-- audiologist_handoff_message
-- audiologist_handoff_call
-- crisp
-- enhance_speech
-- focused
-- natural
-- occlusion
-- reduce_brightness
-- reduce_intensity
-- reduce_noise
-- ask_personality
-- ask_name
-- ask_competency
-- chitchat
-- confirm_environment
-- confirm_soundintent
-- test
-slots:
-  configuration:
-    auto_fill: false
-    type: unfeaturized
-  requested_slot:
-    type: unfeaturized
-  satisfaction:
-    auto_fill: false
-    type: bool
-  environment:
-    type: categorical
-      values:
-      - kitchen
-      - meeting room
-  soundintent:
-    type: categorical
-      values:
-      - meeting
-      - lecture
-      - conversation
-  user_name:
-    type: text
-  userid:
-    type: text
-  crisp:
-    type: text
-  lively:
-    type: text
-  natural:
-    type: text
-  focused:
-    type: text
-  occlusion:
-    type: text
-  ambience:
-    type: text
-  speech:
-    type: text
-  brightness:
-    type: text
-  intensity:
-    type: text
-  noise:
-    type: text
-templates:
-  utter_affirm:
-  - text: awesome! i'll note you like that setting in this soundscape
-  - text: great! i'll remember you prefer that setting in this context
-  utter_anything_else:
-  - text: Do you need any other help?
-  utter_ask_configuration:
-  - text: whats the challenge in this listening scenario ?
-  utter_ask_continue:
-  - text: do you want to continue?
-  utter_ask_rephrase:
-  - text: Could you please rephrase your last sentence?
-  utter_ask_satisfication:
-  - text: does your selected setting work ok in this soundscape ?
-  - text: is your current setting optimal in this environment ?
-  - text: does your chosen setting function well in this context?
-  utter_ask_user_name:
-  - text: Can you tell me your name?
-  - text: Can I have your name?
-  - text: May I have your name?
-  utter_botname:
-  - text: my name is i'm an Opn AI prototype.
-  - text: Opn AI prototype.
-  - text: i'm an Opn AI prototype.
-  utter_call_audiologist:
-  - text: OK I will call your audiologist now.
-  utter_cheer_up:
-  - text: 'Here is something to cheer you up:'
-  utter_crisp:
-  - text: "'crisp' amplifies soft sounds and make them very bright to enhance consonants;\
-      \ do you prefer 'crisp' in this listening scenario ?"
-  utter_crisp_change:
-  - text: This will help you perceive voice better. Would you like to try this out?
-  utter_default:
-  - text: Sorry. I didn't catch you
-  - text: Sorry, I didn't get that. Could you please rephrase?
-  - text: I didn't understand, could you rephrase that?
-  - text: I'm sorry, but I didn't understand you. Could you please rephrase what you
-      just said?
-  - text: I'm afraid I didn't get what you just said. Could you rephrase that?
-  - text: I didn't quite get that, could you rephrase your message?
-  - text: Could you rephrase your message? I didn't get it, I'm sorry.
-  utter_deny:
-  - text: no ?   what would you prefer in this listening environment ?
-  - text: uhuh   whats the challenge in this listening scenario ?
-  utter_did_that_help:
-  - text: Did that help you?
-  utter_email_audiologist:
-  - text: Sure, I will send this issue to your audiologist.
-  utter_enhance_ambience:
-  - text: try 'lively' to enhance ambient sounds ? is that in this context ?
-  - text: try 'lively' to increase sounds from all around ? do you prefer that in
-      this situation ?
-  utter_enhance_speech:
-  - text: try 'crisp' to make sounds more bright and intense ? is that better in this
-      context ?
-  - text: try 'crisp' to increase brightness and add more detail ? do you prefer that
-      in this situation ?
-  utter_focused:
-  - text: "'focused' reduces noise and sounds warmer but provides less speeech  enhancement;\
-      \ do you prefer 'focused' in this listening scenario ?"
-  utter_focused_change:
-  - text: It help you to reduce the background noise, that you can focus more on the
-      target you are listening to. Would you like to try this out?
-  utter_goodbye:
-  - text: Bye
-  - text: Goodbye!
-  - text: Bye!
-  - text: Ciao!
-  - text: Bye, was nice talking to you!
-  utter_greet:
-  - text: heey i'm an Opn AI prototype.
-  - text: hi i'm an Opn AI prototype.
-  - text: hello i'm an Opn AI prototype.
-  utter_human_to_contact:
-  - text: Do you want to talk to your Audiologist or Oticon?
-  utter_lively:
-  - text: "'lively' offers more ambient sounds and sounds brighter and more intense;\
-      \ do you prefer 'lively' in this listening scenario ?"
-  utter_lively_change:
-  - text: This will improve the background sound. Would you like to try this out?
-  utter_make_note:
-  - text: i'll make a note of this for your clinician.
-  - text: i'll leave a message about this for your clinician
-  utter_natural:
-  - text: "'natural' attenuates noise but sounds less bright and intense; do you prefer\
-      \ 'natural' in this listening scenario ?"
-  utter_natural1_change:
-  - text: Reduce the sharpness of the sound you hear. Would you like to try this out?
-  utter_natural2_change:
-  - text: Reduce the xxxxxx of the sound you hear. Would you like to try this out?
-  utter_occlusion:
-  - text: hmmm sounds like you might benefit from a more open type of speaker dome
-  utter_octicon:
-  - text: Sure, i will leave a message to oticon customer service.
-  utter_out_of_scope:
-  - text: Sorry, I can't deal with that request.
-  - text: I'm sorry, I can't handle that request.
-  - text: I can't help you with that, I'm sorry.
-  - text: Even a Rasa bot is not completely perfect - it seems like I can't handle
-      that request.
-  utter_reduce_brightness:
-  - text: try 'natural' which sounds less bright ? is that better in this context?
-  - text: try 'natural' which is less sharp ? do you prefer that in this situation
-      ?
-  utter_reduce_intensity:
-  - text: try 'natural' to balance sounds and make them less intense ? is that better
-      in this context ?
-  - text: try 'natural' to reduce ambient sounds and intensity ? do you prefer that
-      in this situation ?
-  utter_reduce_noise:
-  - text: try 'focused' to zoom out and reduce background noise ? is that better in
-      this context ?
-  - text: try 'focused' to make sounds darker and less noisy ? do you prefer that
-      in this situation ?
-  utter_thanks:
-  - text: sure no problem. anything else I can do for you?
-  - text: you are welcome. What else can I help?
-  - text: my pleasure. do you need to change any other settings?
-  utter_thanks_over:
-  - text: I am always here to help you.
-  utter_what:
-  - text: i can help you adapt Opn to the context or contact your clinician by leaving
-      a message.does your current setting work ok in this soundscape ?
-  - text: i can help you adapt Opn to the context or make a note to your clinician.
-      is your current setting optimal in this environment ?
-  utter_who:
-  - text: "i'm an AI prototype designed by oticon R&D. i can help you adapt Opn to\
-      \ the context or contact your clinician by leaving a message.does your current\
-      \ setting work ok in this soundscape ? "
-  - text: i'm an AI prototype designed by oticon R&D. i can help you adapt Opn to
-      the context or make a note to your clinician.is your current setting optimal
-      in this environment ?
-  - text: i'm an AI prototype designed by oticon R&D. i can help you adapt Opn to
-      the context or make a note to your clinician. does your chosen setting function
-      well in this context?
-  utter_environment:
-    - text: "Where are you now?"
-    - text: "Can you tell me what environment are you in?"
-  utter_soundintent:
-    - text: "What intent do you choose?"
+- utter_this_is_bright
+- utter_this_is_soft_gain
+- utter_this_is_MPO
+- utter_increase_MPO
+- utter_decrease_MPO
+- utter_decrease_general_gain
+- utter_troubleshooting
+- utter_increase_soft_gain
+- utter_decrease_soft_gain
+- utter_reduce_bright
+- utter_noise_reduction_off
+- utter_increase_bright
+- utter_frontal_focus
+- utter_reduce_MPO

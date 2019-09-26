@@ -1,4 +1,6 @@
-## occlusion
-* occlusion
-  - action_leave_note
-  - utter_occlusion
+## troubleshooting affirm path
+* troubleshooting
+  - utter_troubleshooting
+* thanks
+  - utter_thanks
+  

@@ -111,3 +111,18 @@ class FetchProfileAction(Action):
 
     def run(self, dispatcher, tracker, domain):
         return [SlotSet("environment", "kitchen"),SlotSet("soundintent", "meeting")]
+
+
+class FetchProfileAction(Action):
+    def name(self):
+        return "action_fetch_labels"
+
+    def run(self, dispatcher, tracker, domain):
+ #       with open("labels.csv")as csv_file:
+ #           csv_reader = csv.reader(csv_file, delimiter=',')
+ #           for row in csv_reader:
+ #               SlotSet("label", row)
+                
+#        dispatcher.utter_template("utter_selected",tracker)
+
+        return [SlotSet("label", "meeting room work meeting")]

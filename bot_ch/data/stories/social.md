@@ -1,27 +1,27 @@
-## greet path
-* greet
-  - utter_greet
-  - utter_ask_satisfication
+## deny path enhance speech
+* report_problem
+  - action_fetch_labels
+  - slot{"label":"meeting room work meeting"}
+  - utter_enhance_speech
 
-## thanks over path
+## deny path_focus
+* report_problem
+  - action_fetch_labels
+  - slot{"label":"lecture listening to speech"}
+  - utter_focused
+
+
+## thanks path
 * thanks
   - utter_thanks
-* thanks_over
-  - utter_thanks_over
 
-
-## report path
-* report_problem
-  - utter_deny
 
 ## say goodbye
 * goodbye
   - utter_goodbye
 
-
-## test form path
+## test path
 * test
+  - action_fetch_UserId
+  - slot{"userid" : "basic"}
   - action_hello_world
-  - program_form
-  - form{"name": "program_form"}
-  - form{"name": null}

@@ -6,9 +6,10 @@
 - Difficult to understand what people say
 - Feel that people are mumbling
 - poor speech recognition at distance
-- Must really concentrate to hear someone talk or whisper
+
 
 ## intent:decrease_soft_gain
+- Must really concentrate to hear someone talk or whisper
 - Too much environment noise
 - I hear too much soft details around
 - The sound around is disturbing me.
