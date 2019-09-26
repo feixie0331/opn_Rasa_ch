@@ -43,70 +43,70 @@ templates:
   utter_selected:
   - text:
   utter_this_is_bright:
-  - text: ÁÁ¶È»á¸Ä±äÄú¶ÔÖĞ¸ßÆµÉùÒôµÄ¸ĞÖª¡£ Ôö¼ÓÁÁ¶È¿ÉÒÔ°ïÖúÄúÁË½â¸ü¶à¸¨Òô¡£ µ«ÊÇ£¬ÁÁ¶È¹ı¸ß¿ÉÄÜ»áµ¼ÖÂÉùÒô±äµÃ¹ıÓÚ¼âÈñ¡£ ÄúÏë³¢ÊÔÒ»ÏÂÂğ£¿(Brightness
+  - text: äº®åº¦ä¼šæ”¹å˜æ‚¨å¯¹ä¸­é«˜é¢‘å£°éŸ³çš„æ„ŸçŸ¥ã€‚ å¢åŠ äº®åº¦å¯ä»¥å¸®åŠ©æ‚¨äº†è§£æ›´å¤šè¾…éŸ³ã€‚ ä½†æ˜¯ï¼Œäº®åº¦è¿‡é«˜å¯èƒ½ä¼šå¯¼è‡´å£°éŸ³å˜å¾—è¿‡äºå°–é”ã€‚ æ‚¨æƒ³å°è¯•ä¸€ä¸‹å—ï¼Ÿ(Brightness
       changes your perception in mid to high frequencies sounds. Increse brightness
       can help you to understand more consonants. However, too much brightness may
       cause sounds become too sharp. Would you like to try this out?)
   utter_this_is_soft_gain:
-  - text: ÈáºÍÔöÒæ»á¸Ä±äÈáºÍÉùÒôµÄÔöÒæ¡£ ¸ü¶àÈáºÍµÄÉùÒô¿ÉÒÔÔöÇ¿ÓïÒôÊ¶±ğÄÜÁ¦¡£¸ü¶àÈáºÍµÄÉùÒô¿ÉÄÜĞèÒª¸ü¶à¾«Á¦íÊ¶±ğ¡£ ÄãÏëÊÔÒ»ÏÂÂğ£¿(Soft gain
+  - text: æŸ”å’Œå¢ç›Šä¼šæ”¹å˜æŸ”å’Œå£°éŸ³çš„å¢ç›Šã€‚ æ›´å¤šæŸ”å’Œçš„å£°éŸ³å¯ä»¥å¢å¼ºè¯­éŸ³è¯†åˆ«èƒ½åŠ›ã€‚æ›´å¤šæŸ”å’Œçš„å£°éŸ³å¯èƒ½éœ€è¦æ›´å¤šç²¾åŠ›ä¾†è¯†åˆ«ã€‚ ä½ æƒ³è¯•ä¸€ä¸‹å—ï¼Ÿ(Soft gain
       changes the gain on soft sounds. More soft sounds can enhance speech recognition.
       Too much soft sounds may require too much efforts for process. Would you like
       to try?)
   utter_increase_bright:
-  - text: ÎÒ¶®ÁË¡£ ËÆºõÓÉÓÚÖĞ¸ßÆµÔöÒæÌ«µÍ£¬ÎÒ½«Ôö¼ÓÁÁ¶ÈÒÔ¸üºÃµØÇø·ÖÓïÒôÖĞµÄ¶Ô±È¶È(I see. It seems because the mid high
+  - text: æˆ‘æ‡‚äº†ã€‚ ä¼¼ä¹ç”±äºä¸­é«˜é¢‘å¢ç›Šå¤ªä½ï¼Œæˆ‘å°†å¢åŠ äº®åº¦ä»¥æ›´å¥½åœ°åŒºåˆ†è¯­éŸ³ä¸­çš„å¯¹æ¯”åº¦(I see. It seems because the mid high
       frequency gain too low, I will increase the brightness for better distinguish
       contrasts in speech).
   utter_increase_soft_gain:
-  - text: àÅ£¬ÎÒÏëÒ²ĞíÊÇÒòÎªÈáºÍÉùÒôµÄÔöÒæÌ«µÍ£¬ËùÒÔÎÒ»áÔö¼ÓÈáºÍÔöÒæ¿ØÖÆµÄÉèÖÃ¡£(emmm, I think maybe because gain on
+  - text: å—¯ï¼Œæˆ‘æƒ³ä¹Ÿè®¸æ˜¯å› ä¸ºæŸ”å’Œå£°éŸ³çš„å¢ç›Šå¤ªä½ï¼Œæ‰€ä»¥æˆ‘ä¼šå¢åŠ æŸ”å’Œå¢ç›Šæ§åˆ¶çš„è®¾ç½®ã€‚(emmm, I think maybe because gain on
       soft sounds is too low, I will increase the setting of soft gain control. )
   utter_reduce_bright:
-  - text: ²»ÓÃµ£ĞÄ£¬ÒòÎªÉùÒôÃ÷ÁÁ¶ÈÌ«¸ß£¬ÎÒ»á¼õÉÙÃ÷ÁÁ¸Ğ¿ØÖÆµÄÉèÖÃ¡£(Don't worry, that maybe because the brightness
+  - text: ä¸ç”¨æ‹…å¿ƒï¼Œå› ä¸ºå£°éŸ³æ˜äº®åº¦å¤ªé«˜ï¼Œæˆ‘ä¼šå‡å°‘æ˜äº®æ„Ÿæ§åˆ¶çš„è®¾ç½®ã€‚(Don't worry, that maybe because the brightness
       is too high, I will reduce the setting of the bright perception control.)
   utter_decrease_soft_gain:
-  - text: ±ğ×Å¼±£¬ÎÒ¿ÉÒÔ°ïÖúÄú¼õÉÙÈíÔöÒæ¿ØÖÆµÄÉèÖÃ£¬ÒÔ¼õÉÙ¸ĞÖªµ½µÄÈáºÍÉùÒô¡£(Calm down, I can help you to reduce the
+  - text: åˆ«ç€æ€¥ï¼Œæˆ‘å¯ä»¥å¸®åŠ©æ‚¨å‡å°‘è½¯å¢ç›Šæ§åˆ¶çš„è®¾ç½®ï¼Œä»¥å‡å°‘æ„ŸçŸ¥åˆ°çš„æŸ”å’Œå£°éŸ³ã€‚(Calm down, I can help you to reduce the
       setting of the soft gain control, in order to get perceive less soft sounds.)
   utter_troubleshooting:
-  - text: ºÜ±§Ç¸·¢ÉúÕâÑùµÄÎÊÌâ£¬ÕâÀàÎÊÌâÍ¨³£ÒòÎªÖúÌıÆ÷Éè±¸ÓĞËğ»µ£¬ÎÒÃ»ÓĞ°ì·¨Á¢¿Ì´¦Àí¡£µ«ÎÒ»á¾¡¿ìÁªÏµÄãµÄÒ½Éú¡£(Sorry to hear that, I
+  - text: å¾ˆæŠ±æ­‰å‘ç”Ÿè¿™æ ·çš„é—®é¢˜ï¼Œè¿™ç±»é—®é¢˜é€šå¸¸å› ä¸ºåŠ©å¬å™¨è®¾å¤‡æœ‰æŸåï¼Œæˆ‘æ²¡æœ‰åŠæ³•ç«‹åˆ»å¤„ç†ã€‚ä½†æˆ‘ä¼šå°½å¿«è”ç³»ä½ çš„åŒ»ç”Ÿã€‚(Sorry to hear that, I
       can't help with this right away. I will inform your audiologist immediately.)
   utter_this_is_MPO:
-  - text: MPOÓëOPNµÄ×î´óÊä³öÓĞ¹Ø¡£ Èç¹ûÄúÏ£ÍûOPNÉùÒô¸ü´ó£¬Ôò±íÊ¾MPOÌ«µÍ¡£(MPO relates to the maximum output
+  - text: MPOä¸OPNçš„æœ€å¤§è¾“å‡ºæœ‰å…³ã€‚ å¦‚æœæ‚¨å¸Œæœ›OPNå£°éŸ³æ›´å¤§ï¼Œåˆ™è¡¨ç¤ºMPOå¤ªä½ã€‚(MPO relates to the maximum output
       of the OPN. If you expect OPN to be louder, that means MPO is too low. )
   utter_increase_MPO:
-  - text: ÎÒÃ÷°×ÁË£¬íÊÔÊÔµ÷¸ßMPO¡£ÏÖÔÚ¸Ğ¾õÔõÃ´Ñù£¿(Got it! Would you like to try tuning on a bit MPO
+  - text: æˆ‘æ˜ç™½äº†ï¼Œä¾†è¯•è¯•è°ƒé«˜MPOã€‚ç°åœ¨æ„Ÿè§‰æ€ä¹ˆæ ·ï¼Ÿ(Got it! Would you like to try tuning on a bit MPO
       setting?)
   utter_decrease_MPO:
-  - text: íÊÔÊÔµ÷µÍMPOµÃµ½¸üµÍµÄÒôÁ¿£¬ÏÖÔÚ¸üÂúÒâÁËÂğ(Let's turn down MPO to getter lower volumn.)
+  - text: ä¾†è¯•è¯•è°ƒä½MPOå¾—åˆ°æ›´ä½çš„éŸ³é‡ï¼Œç°åœ¨æ›´æ»¡æ„äº†å—(Let's turn down MPO to getter lower volumn.)
   utter_reduce_MPO:
-  - text: ÎÒ»á³¢ÊÔµ÷µÍMPOµÄÉè¶¨£¬Äã¾õµÃ¸üÂúÒâÁËÂğ£¿(It's a pity. I will turn down the MPO setting, would
+  - text: æˆ‘ä¼šå°è¯•è°ƒä½MPOçš„è®¾å®šï¼Œä½ è§‰å¾—æ›´æ»¡æ„äº†å—ï¼Ÿ(It's a pity. I will turn down the MPO setting, would
       you like to try?)
   utter_enhance_ambience:
-  - text: ³¢ÊÔÔö¼ÓÈ«ÏòĞÔÒÔ×ªÒÆ×¢ÒâÁ¦ÒÔÔöÇ¿»·¾³ÉùÒôÂğ£¿ ÕâÑùµÄµ÷½ÚÓĞ°ïÖúÂğ£¿(try increase omnidirectionality in order
+  - text: å°è¯•å¢åŠ å…¨å‘æ€§ä»¥è½¬ç§»æ³¨æ„åŠ›ä»¥å¢å¼ºç¯å¢ƒå£°éŸ³å—ï¼Ÿ è¿™æ ·çš„è°ƒèŠ‚æœ‰å¸®åŠ©å—ï¼Ÿ(try increase omnidirectionality in order
       to shift attention to enhance ambient sounds ? is that in this context ?)
   utter_reduce_noise:
-  - text: ³¢ÊÔË¥¼õ·½ÏòĞÔºÍÀ©É¢ĞÔÔëÉùÒÔ¼õÉÙ±³¾°ÔëÉù£¿ ÕâÑùµÄ¸Ä±ä¸üÁîÄãÂúÒâÂğ£¿(try attenuate the directional and diffuse
+  - text: å°è¯•è¡°å‡æ–¹å‘æ€§å’Œæ‰©æ•£æ€§å™ªå£°ä»¥å‡å°‘èƒŒæ™¯å™ªå£°ï¼Ÿ è¿™æ ·çš„æ”¹å˜æ›´ä»¤ä½ æ»¡æ„å—ï¼Ÿ(try attenuate the directional and diffuse
       noise to reduce background noise ? is that better in this context ?)
   utter_frontal_focus:
-  - text: Äú¿ÉÒÔ³¢ÊÔÖ»×¨×¢ÓÚÇ°ÃæÒÔÏû³ıÔëÒô(You can try to only focus on the front to get rid of the
+  - text: æ‚¨å¯ä»¥å°è¯•åªä¸“æ³¨äºå‰é¢ä»¥æ¶ˆé™¤å™ªéŸ³(You can try to only focus on the front to get rid of the
       noise.)
   utter_noise_reduction_off:
-  - text: ÎÒ¿ÉÒÔ¹Ø±Õ½µÔë¿ØÖÆÆ÷¡£ ÊÇ²»ÊÇ¸Ğ¾õºÃÒ»µãÁËÄØ£¿(I can turn off the noise reduction controller. Do
+  - text: æˆ‘å¯ä»¥å…³é—­é™å™ªæ§åˆ¶å™¨ã€‚ æ˜¯ä¸æ˜¯æ„Ÿè§‰å¥½ä¸€ç‚¹äº†å‘¢ï¼Ÿ(I can turn off the noise reduction controller. Do
       you think it getting better?)
   utter_decrease_general_gain:
-  - text: ÊÔÊÔµ÷µÍÒôÁ¿ÔõÃ´Ñù£¿ ¾õµÃÊæ·şĞ©ÁËÂğ£¿
+  - text: è¯•è¯•è°ƒä½éŸ³é‡æ€ä¹ˆæ ·ï¼Ÿ è§‰å¾—èˆ’æœäº›äº†å—ï¼Ÿ
   utter_affirm:
-  - text: ÄÇ¾ÍºÃ£¡ÎÒ»á¼ÇÂ¼ÏÂÀ´ÔÚÕâ¸öÇé¾°ÏÂÄãµÄÏ²ºÃ¡£
+  - text: é‚£å°±å¥½ï¼æˆ‘ä¼šè®°å½•ä¸‹æ¥åœ¨è¿™ä¸ªæƒ…æ™¯ä¸‹ä½ çš„å–œå¥½ã€‚
   utter_anything_else:
-  - text: ĞèÒªÆäËûµÄ°ïÖúÂğ£¿
+  - text: éœ€è¦å…¶ä»–çš„å¸®åŠ©å—ï¼Ÿ
   utter_ask_rephrase:
-  - text: ÄÜÖØĞÂËµÒ»ÏÂÄúµÄÎÊÌâÂğ£¿
+  - text: èƒ½é‡æ–°è¯´ä¸€ä¸‹æ‚¨çš„é—®é¢˜å—ï¼Ÿ
   utter_ask_satisfication:
-  - text: ¶Ôµ±Ç°Çé¾°ÏÂµÄÖúÌıÆ÷Éè¶¨»¹ÂúÒâÂğ£¿
+  - text: å¯¹å½“å‰æƒ…æ™¯ä¸‹çš„åŠ©å¬å™¨è®¾å®šè¿˜æ»¡æ„å—ï¼Ÿ
   utter_ask_user_name:
   - text: Can you tell me your name?
   - text: Can I have your name?
   - text: May I have your name?
   utter_botname:
-  - text: ÎÒµÄÃû×ÖÊÇOpn ÈË¹¤ÖÇÄÜ»úÆ÷ÈË
+  - text: æˆ‘çš„åå­—æ˜¯Opn äººå·¥æ™ºèƒ½æœºå™¨äºº
   utter_call_audiologist:
   - text: OK I will call your audiologist now.
   utter_cheer_up:
@@ -118,46 +118,46 @@ templates:
   utter_crisp_change:
   - text: This will help you perceive voice better. Would you like to try this out?
   utter_default:
-  - text: ¶Ô²»Æğ£¬ÎÒÃ»ÌıÃ÷°×¡£¿ÉÒÔÖØ¸´Ò»±ßÂğ¡£
+  - text: å¯¹ä¸èµ·ï¼Œæˆ‘æ²¡å¬æ˜ç™½ã€‚å¯ä»¥é‡å¤ä¸€è¾¹å—ã€‚
   utter_deny:
-  - text: »¹ÊÇ²»ÂúÒâ£¿ íÃèÊöÒ»ÏÂÄãÌıµ½µÄÓĞÊ²Ã´ÎÊÌâ°É¡£
+  - text: è¿˜æ˜¯ä¸æ»¡æ„ï¼Ÿ ä¾†æè¿°ä¸€ä¸‹ä½ å¬åˆ°çš„æœ‰ä»€ä¹ˆé—®é¢˜å§ã€‚
   utter_did_that_help:
-  - text: ÕâÑù¿ÉÒÔ½â¾öÄãµÄÎÊÌâÂğ
+  - text: è¿™æ ·å¯ä»¥è§£å†³ä½ çš„é—®é¢˜å—
   utter_email_audiologist:
-  - text: ºÃµÄ£¬ÎÒ»á½«ÄãµÄÎÊÌâ¸æËßÒ½Éú
+  - text: å¥½çš„ï¼Œæˆ‘ä¼šå°†ä½ çš„é—®é¢˜å‘Šè¯‰åŒ»ç”Ÿ
   utter_enhance_speech:
-  - text: ÊÔÊÔÉùÒô¸üÃ÷ÁÁ²¢ÇÒÒıÈë¸ü¶àÈáÈíµÄÏ¸½Ú£¿¸Ğ¾õ¸ü¶Ô»°¸üÇåÎúÁËÂğ£¿(try  to make sounds more bright and intense
+  - text: è¯•è¯•å£°éŸ³æ›´æ˜äº®å¹¶ä¸”å¼•å…¥æ›´å¤šæŸ”è½¯çš„ç»†èŠ‚ï¼Ÿæ„Ÿè§‰æ›´å¯¹è¯æ›´æ¸…æ™°äº†å—ï¼Ÿ(try  to make sounds more bright and intense
       ? is that better in this context ?)
   utter_focused:
-  - text: ¡°×¨×¢¡±¿É½µµÍÔëÒô²¢ÌıÆğÀ´¸üÎÂÅ¯£¬µ«¶ÔÓïÒôµÄÔöÇ¿×÷ÓÃ½ÏĞ¡£» ÔÚÕâÖÖñöÌı³¡¾°ÖĞ£¬Äú¸üÏ²»¶¡°×¨×¢¡±Âğ£¿('focused' reduces noise
+  - text: â€œä¸“æ³¨â€å¯é™ä½å™ªéŸ³å¹¶å¬èµ·æ¥æ›´æ¸©æš–ï¼Œä½†å¯¹è¯­éŸ³çš„å¢å¼ºä½œç”¨è¾ƒå°ï¼› åœ¨è¿™ç§è†å¬åœºæ™¯ä¸­ï¼Œæ‚¨æ›´å–œæ¬¢â€œä¸“æ³¨â€å—ï¼Ÿ('focused' reduces noise
       and sounds warmer but provides less speeech  enhancement; do you prefer 'focused'
       in this listening scenario ?)
   utter_focused_change:
-  - text: Ëü¿ÉÒÔ°ïÖúÄú¼õÉÙ±³¾°ÔëÒô£¬Ê¹Äú¿ÉÒÔ½«¸ü¶àµÄ×¢ÒâÁ¦¼¯ÖĞÔÚÕıÔÚÌıµÄÄ¿±êÉÏ¡£ ÄúÏë³¢ÊÔÒ»ÏÂÂğ£¿(It help you to reduce the background
+  - text: å®ƒå¯ä»¥å¸®åŠ©æ‚¨å‡å°‘èƒŒæ™¯å™ªéŸ³ï¼Œä½¿æ‚¨å¯ä»¥å°†æ›´å¤šçš„æ³¨æ„åŠ›é›†ä¸­åœ¨æ­£åœ¨å¬çš„ç›®æ ‡ä¸Šã€‚ æ‚¨æƒ³å°è¯•ä¸€ä¸‹å—ï¼Ÿ(It help you to reduce the background
       noise, that you can focus more on the target you are listening to. Would you
       like to try this out?)
   utter_goodbye:
-  - text: ÔÙ¼û
-  - text: ÏÂ´Î¼û
+  - text: å†è§
+  - text: ä¸‹æ¬¡è§
   utter_greet:
-  - text: ÄãºÃ£¬ÎÒÊÇOpn ÈË¹¤ÖÇÄÜ»úÆ÷ÈËÔ­ĞÍ¡£ÎÒ¿ÉÒÔ°ïÄãµ÷½ÚÖúÌıÆ÷´ïµ½×îÀíÏëµÄĞ§¹û¡£¸æËßÎÒÄãÏÖÔÚÃæÁÙµÄÎÊÌâ¡£(heey i'm an Opn AI prototype.
+  - text: ä½ å¥½ï¼Œæˆ‘æ˜¯Opn äººå·¥æ™ºèƒ½æœºå™¨äººåŸå‹ã€‚æˆ‘å¯ä»¥å¸®ä½ è°ƒèŠ‚åŠ©å¬å™¨è¾¾åˆ°æœ€ç†æƒ³çš„æ•ˆæœã€‚å‘Šè¯‰æˆ‘ä½ ç°åœ¨é¢ä¸´çš„é—®é¢˜ã€‚(heey i'm an Opn AI prototype.
       I can help you to find optimal settings. Tell me your difficulties in this environment.)
   utter_human_to_contact:
-  - text: ÄãÏëÒªÁªÏµÒ½Éú»òÕßOticon¹«Ë¾Âğ
+  - text: ä½ æƒ³è¦è”ç³»åŒ»ç”Ÿæˆ–è€…Oticonå…¬å¸å—
   utter_make_note:
-  - text: ÎÒ½«¸æÖªÄãµÄÒ½Éú
+  - text: æˆ‘å°†å‘ŠçŸ¥ä½ çš„åŒ»ç”Ÿ
   utter_octicon:
-  - text: ºÃµÄ£¬ÎÒ½«·¢ËÍĞÅÏ¢µ½oticonµÄ¿Í»§·şÎñ²¿ÃÅ¡£
+  - text: å¥½çš„ï¼Œæˆ‘å°†å‘é€ä¿¡æ¯åˆ°oticonçš„å®¢æˆ·æœåŠ¡éƒ¨é—¨ã€‚
   utter_out_of_scope:
-  - text: ºÜ±§Ç¸£¬Ä¿Ç°ÎÒÎŞ·¨½â¾öÕâ¸öÎÊÌâ¡£ÎÒÊÇÓÉOticon¹«Ë¾Éè¼ÆµÄAI»úÆ÷ÈËÔ­ĞÍ£¬ÎÒ¿ÉÒÔ¸ù¾İÖÜÎ§»·¾³ºÍÄãµÄĞèÇóµ÷½ÚÖúÌıÆ÷£¬²¢ÇÒ¿ÉÒÔ×ª´ï¸øÄãµÄÒ½Éú¡£ÏÖÔÚÄãµÄÖúÌıÆ÷Éè¶¨»¹ÁîÄãÂúÒâÂğ£¿
+  - text: å¾ˆæŠ±æ­‰ï¼Œç›®å‰æˆ‘æ— æ³•è§£å†³è¿™ä¸ªé—®é¢˜ã€‚æˆ‘æ˜¯ç”±Oticonå…¬å¸è®¾è®¡çš„AIæœºå™¨äººåŸå‹ï¼Œæˆ‘å¯ä»¥æ ¹æ®å‘¨å›´ç¯å¢ƒå’Œä½ çš„éœ€æ±‚è°ƒèŠ‚åŠ©å¬å™¨ï¼Œå¹¶ä¸”å¯ä»¥è½¬è¾¾ç»™ä½ çš„åŒ»ç”Ÿã€‚ç°åœ¨ä½ çš„åŠ©å¬å™¨è®¾å®šè¿˜ä»¤ä½ æ»¡æ„å—ï¼Ÿ
   utter_thanks:
-  - text: Ã»ÎÊÌâ
-  - text: ²»ÓÃĞ»
-  - text: ĞèÒª°ïÖú¾Í¸æËßÎÒ:)
+  - text: æ²¡é—®é¢˜
+  - text: ä¸ç”¨è°¢
+  - text: éœ€è¦å¸®åŠ©å°±å‘Šè¯‰æˆ‘:)
   utter_what:
-  - text: ÎÒ¿ÉÒÔ¸ù¾İÖÜÎ§»·¾³ºÍÄãµÄĞèÇóµ÷½ÚÖúÌıÆ÷£¬²¢ÇÒ¿ÉÒÔ×ª´ï¸øÄãµÄÒ½Éú¡£ÏÖÔÚÄãµÄÖúÌıÆ÷Éè¶¨»¹ÁîÄãÂúÒâÂğ£¿
+  - text: æˆ‘å¯ä»¥æ ¹æ®å‘¨å›´ç¯å¢ƒå’Œä½ çš„éœ€æ±‚è°ƒèŠ‚åŠ©å¬å™¨ï¼Œå¹¶ä¸”å¯ä»¥è½¬è¾¾ç»™ä½ çš„åŒ»ç”Ÿã€‚ç°åœ¨ä½ çš„åŠ©å¬å™¨è®¾å®šè¿˜ä»¤ä½ æ»¡æ„å—ï¼Ÿ
   utter_who:
-  - text: ÎÒÊÇÓÉOticon¹«Ë¾Éè¼ÆµÄAI»úÆ÷ÈËÔ­ĞÍ£¬ÎÒ¿ÉÒÔ¸ù¾İÖÜÎ§»·¾³ºÍÄãµÄĞèÇóµ÷½ÚÖúÌıÆ÷£¬²¢ÇÒ¿ÉÒÔ×ª´ï¸øÄãµÄÒ½Éú¡£ÏÖÔÚÄãµÄÖúÌıÆ÷Éè¶¨»¹ÁîÄãÂúÒâÂğ£¿
+  - text: æˆ‘æ˜¯ç”±Oticonå…¬å¸è®¾è®¡çš„AIæœºå™¨äººåŸå‹ï¼Œæˆ‘å¯ä»¥æ ¹æ®å‘¨å›´ç¯å¢ƒå’Œä½ çš„éœ€æ±‚è°ƒèŠ‚åŠ©å¬å™¨ï¼Œå¹¶ä¸”å¯ä»¥è½¬è¾¾ç»™ä½ çš„åŒ»ç”Ÿã€‚ç°åœ¨ä½ çš„åŠ©å¬å™¨è®¾å®šè¿˜ä»¤ä½ æ»¡æ„å—ï¼Ÿ
 actions:
 - action_fetch_UserId
 - action_hello_world
