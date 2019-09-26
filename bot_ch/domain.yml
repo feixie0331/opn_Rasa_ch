@@ -25,6 +25,7 @@ intents:
 - enhance_ambience
 - what_is_MPO
 - what_is_bright
+- None
 entities:
 - features
 slots:

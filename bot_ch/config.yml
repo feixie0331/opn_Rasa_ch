@@ -4,13 +4,16 @@
 language: zh
 pipeline:
 - name: "JiebaTokenizer"
+  intent_split_symbol: "_"
 - name: "RegexFeaturizer"
 - name: "CRFEntityExtractor"
 - name: "EntitySynonymMapper"
 - name: "CountVectorsFeaturizer"
-- name: "EmbeddingIntentClassifier"
-  intent_tokenization_flag: true
-  intent_split_symbol: "+"
+- name: "CountVectorsFeaturizer"
+  analyzer: "char_wb"
+  min_ngram: 1
+  max_ngram: 4
+- name: "EmbeddingIntentClassifier"  
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/
