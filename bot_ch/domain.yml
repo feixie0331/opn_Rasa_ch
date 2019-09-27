@@ -59,73 +59,73 @@ templates:
   utter_selected:
   - text:
   utter_this_is_bright:
-  - text: 亮度会改变您对中高频声音的感知。 增加亮度可以帮助您了解更多辅音。 但是，亮度过高可能会导致声音变得过于尖锐。 您想尝试一下吗？(Brightness
+  - text: Brightness
       changes your perception in mid to high frequencies sounds. Increse brightness
       can help you to understand more consonants. However, too much brightness may
-      cause sounds become too sharp. Would you like to try this out?)
+      cause sounds become too sharp. Would you like to try this out?
   utter_this_is_soft_gain:
-  - text: 柔和增益会改变柔和声音的增益。 更多柔和的声音可以增强语音识别能力。更多柔和的声音可能需要更多精力來识别。 你想试一下吗？(Soft gain
+  - text: Soft gain
       changes the gain on soft sounds. More soft sounds can enhance speech recognition.
       Too much soft sounds may require too much efforts for process. Would you like
-      to try?)
+      to try?
   utter_increase_bright:
-  - text: 我懂了。 似乎由于中高频增益太低，我将增加亮度以更好地区分语音中的对比度。有没有觉得好一点了呢？(I see. It seems because
+  - text: I see. It seems because
       the mid high frequency gain too low, I will increase the brightness for better
-      distinguish contrasts in speech， would you like this setting for current context?).
+      distinguish contrasts in speech， would you like this setting for current context?.
   utter_increase_soft_gain:
-  - text: 嗯，我想也许是因为柔和声音的增益太低，所以我会增加柔和增益控制的设置。是不是好多了？(emmm, I think maybe because gain
+  - text: emmm, I think maybe because gain
       on soft sounds is too low, I will increase the setting of soft gain control.
-      Are you satisfied with the adjustment? )
+      Are you satisfied with the adjustment? 
   utter_reduce_bright:
-  - text: 不用担心，因为声音明亮度太高，我会减少明亮感控制的设置。现在好点了吗？(Don't worry, that maybe because the
+  - text: Don't worry, that maybe because the
       brightness is too high, I will reduce the setting of the bright perception control.
-      Are you satisfied with the changes in setting?)
+      Are you satisfied with the changes in setting?
   utter_decrease_soft_gain:
-  - text: 别着急，我可以帮助您减少软增益控制的设置，以减少感知到的柔和声音。感觉好一些了吗？(Calm down, I can help you to reduce
+  - text: Calm down, I can help you to reduce
       the setting of the soft gain control, in order to get perceive less soft sounds.
-      Is the OPN performing better?)
+      Is the OPN performing better?
   utter_troubleshooting:
-  - text: 很抱歉发生这样的问题，这类问题通常因为助听器设备有损坏，我没有办法立刻处理。但我会尽快联系你的医生。(Sorry to hear that, I
-      can't help with this right away. I will inform your audiologist immediately.)
+  - text: Sorry to hear that, I
+      can't help with this right away. I will inform your audiologist immediately.
   utter_this_is_MPO:
-  - text: MPO与OPN的最大输出有关。 如果您希望OPN声音更大，则表示MPO太低。(MPO relates to the maximum output
-      of the OPN. If you expect OPN to be louder, that means MPO is too low. )
+  - text: MPO relates to the maximum output
+      of the OPN. If you expect OPN to be louder, that means MPO is too low. would you like this setting for current context?
   utter_increase_MPO:
-  - text: 我明白了，來试试调高MPO。现在感觉怎么样？(Got it! Would you like to try tuning on a bit MPO
-      setting?)
+  - text: Got it! Would you like to try tuning on a bit MPO
+      setting? would you like this setting for current context?
   utter_decrease_MPO:
-  - text: 來试试调低MPO得到更低的音量，现在还有那里有问题吗(Let's turn down MPO to getter lower volumn.)
+  - text: Let's turn down MPO to getter lower volumn. would you like this setting for current context?
   utter_reduce_MPO:
-  - text: 我会尝试调低MPO的设定，你觉得现在是你想要的效果了吗？(It's a pity. I will turn down the MPO setting,
-      would you like to try?)
+  - text: It's a pity. I will turn down the MPO setting,
+      would you like to try? would you like this setting for current context?
   utter_enhance_ambience:
-  - text: 尝试增加全向性以转移注意力以增强环境声音吗？ 这样的调节有帮助吗？(try increase omnidirectionality in order
-      to shift attention to enhance ambient sounds ? is that in this context ?)
+  - text: try increase omnidirectionality in order
+      to shift attention to enhance ambient sounds ? is that in this context ?
   utter_reduce_noise:
-  - text: 尝试衰减方向性和扩散性噪声以减少背景噪声？ 这样的改变更令你满意吗？(try attenuate the directional and diffuse
-      noise to reduce background noise ? is that better in this context ?)
+  - text: try attenuate the directional and diffuse
+      noise to reduce background noise ? is that better in this context ?
   utter_frontal_focus:
-  - text: 您可以尝试只专注于前面以消除噪音(You can try to only focus on the front to get rid of the
-      noise.)
+  - text: You can try to only focus on the front to get rid of the
+      noise.
   utter_noise_reduction_off:
-  - text: 我可以关闭降噪控制器。 是不是感觉好一点了呢？(I can turn off the noise reduction controller. Do
-      you think it getting better?)
+  - text: I can turn off the noise reduction controller. Do
+      you think it getting better?
   utter_decrease_general_gain:
-  - text: 试试调低音量怎么样？ 觉得舒服些了吗？
+  - text: How about tuning down the volumn? is that better in this context ?
   utter_affirm:
-  - text: 那就好！我会记录下来在这个情景下你的喜好。
+  - text: Great! I will note down your preferance in this context.
   utter_anything_else:
-  - text: 需要其他的帮助吗？
+  - text: Do you need any other help?
   utter_ask_rephrase:
-  - text: 能重新说一下您的问题吗？
+  - text: Can you rephrase your question please.
   utter_ask_satisfication:
-  - text: 对当前情景下的助听器设定还满意吗？
+  - text: How do you like the performance of your hearing aid?
   utter_ask_user_name:
   - text: Can you tell me your name?
   - text: Can I have your name?
   - text: May I have your name?
   utter_botname:
-  - text: 我的名字是Opn 人工智能机器人
+  - text: My name is Opn, an AI chatbot.
   utter_call_audiologist:
   - text: OK I will call your audiologist now.
   utter_cheer_up:
@@ -137,46 +137,49 @@ templates:
   utter_crisp_change:
   - text: This will help you perceive voice better. Would you like to try this out?
   utter_default:
-  - text: 对不起，我没听明白。可以重复一遍吗。
+  - text: Sorry, I didn't get it. Could you please repeat that please?
   utter_deny:
-  - text: 还是不满意？ 來描述一下你听到的有什么问题吧。
+  - text: Not satisfied? Try feel that and describe the problems.
   utter_did_that_help:
-  - text: 这样可以解决你的问题吗
+  - text: Did that work?
   utter_email_audiologist:
-  - text: 好的，我会将你的问题告诉医生
+  - text: Alright, I will tell your audiologist.
   utter_enhance_speech:
-  - text: 试试声音更明亮并且引入更多柔软的细节？感觉更对话更清晰了吗？(try  to make sounds more bright and intense
-      ? is that better in this context ?)
+  - text: try  to make sounds more bright and intense is that better in this context ?
   utter_focused:
-  - text: “专注”可降低噪音并听起来更温暖，但对语音的增强作用较小； 在这种聆听场景中，您更喜欢“专注”吗？('focused' reduces noise
+  - text: 'focused' reduces noise
       and sounds warmer but provides less speeech  enhancement; do you prefer 'focused'
-      in this listening scenario ?)
+      in this listening scenario ?
   utter_focused_change:
-  - text: 它可以帮助您减少背景噪音，使您可以将更多的注意力集中在正在听的目标上。 您想尝试一下吗？(It help you to reduce the background
+  - text: It help you to reduce the background
       noise, that you can focus more on the target you are listening to. Would you
-      like to try this out?)
+      like to try this out?
   utter_goodbye:
-  - text: 再见
-  - text: 下次见
+  - text: bye
+  - text: see you soon
   utter_greet:
-  - text: 你好，我是Opn 人工智能机器人原型。我可以帮你调节助听器达到最理想的效果。告诉我你现在面临的问题。(heey i'm an Opn AI prototype.
-      I can help you to find optimal settings. Tell me your difficulties in this environment.)
+  - text: heey i'm an Opn AI prototype.
+      I can help you to find optimal settings. Tell me your difficulties in this environment.
   utter_human_to_contact:
-  - text: 你想要联系医生或者Oticon公司吗
+  - text: Would you like to contact the audiologist or Oticon company?
   utter_make_note:
-  - text: 我将告知你的医生
+  - text: I will tell your audiologist about this.
   utter_octicon:
-  - text: 好的，我将发送信息到oticon的客户服务部门。
+  - text: Sure, i will leave a message to oticon customer service.
   utter_out_of_scope:
-  - text: 很抱歉，目前我无法解决这个问题。我是由Oticon公司设计的AI机器人原型，我可以根据周围环境和你的需求调节助听器，并且可以转达给你的医生。现在你的助听器设定还令你满意吗？
+  - text: Sorry, I can't deal with that request.  i can help you adapt Opn to the context or contact your clinician by leaving
+      a message.does your current setting work ok in this soundscape ?
   utter_thanks:
-  - text: 没问题
-  - text: 不用谢
-  - text: 需要帮助就告诉我:)
+  - text: sure no problem.
+  - text: you are welcome.
+  - text: I am always here to help you.
   utter_what:
-  - text: 我可以根据周围环境和你的需求调节助听器，并且可以转达给你的医生。现在你的助听器设定还令你满意吗？
+  - text: i can help you adapt Opn to the context or contact your clinician by leaving
+      a message.does your current setting work ok in this soundscape ?
   utter_who:
-  - text: 我是由Oticon公司设计的AI机器人原型，我可以根据周围环境和你的需求调节助听器，并且可以转达给你的医生。现在你的助听器设定还令你满意吗？
+  - text: "i'm an AI prototype designed by oticon R&D. i can help you adapt Opn to\
+      \ the context or contact your clinician by leaving a message.does your current\
+      \ setting work ok in this soundscape ? "
 actions:
 - action_note_adjust
 - action_fetch_UserId
