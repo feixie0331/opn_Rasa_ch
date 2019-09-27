@@ -1,5 +1,3 @@
-
-
 ## decrease_MPO affirm path
 * greet
   - utter_greet
@@ -19,7 +17,6 @@
  - utter_decrease_general_gain
 * affirm
  - utter_affirm
-
 
 ## decrease_brightness deny second path
 * greet

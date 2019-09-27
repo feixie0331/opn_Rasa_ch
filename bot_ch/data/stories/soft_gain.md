@@ -42,7 +42,6 @@
 * affirm
  - utter_affirm
 
-
 ## decrease_soft_gain deny second path
 * decrease_soft_gain
  - utter_decrease_soft_gain
@@ -72,5 +71,3 @@
   - utter_affirm
 * thanks
   - utter_thanks
-
- 

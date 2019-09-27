@@ -14,6 +14,7 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 from rasa_sdk.forms import FormAction
 import requests
+import json
 
 logger = logging.getLogger(__name__)
 
@@ -51,9 +52,27 @@ class ActionLeaveNote(Action):
             after all required slots are filled"""
         with open("Output.txt", "w") as text_file:
             text_file.write("New dom needed")
-        dispatcher.utter_message("HHHHH")
+        dispatcher.utter_message("很抱歉发生这样的问题，这类问题通常因为助听器设备有损坏，我没有办法立刻处理。但我会尽快联系你的医生。(Sorry to hear that, I can't help with this right away. I will inform your audiologist immediately.)")
         # utter submit template
-        dispatcher.utter_template("utter_make_note", tracker)
+        #dispatcher.utter_template("utter_make_note", tracker)
+        return []
+class ActionDocument(Action):
+    def name(self):
+        return "action_note_adjust"
+    def run(
+        self,
+        dispatcher: CollectingDispatcher,
+        tracker: Tracker,
+        domain: Dict[Text, Any],
+    ) -> List[Dict]:
+        """Define what the form has to do
+            after all required slots are filled"""
+        adjustment=json.dumps(tracker.current_slot_values())
+        with open("adjust.txt", "w") as text_file:
+            text_file.write(adjustment)
+        #dispatcher.utter_message("很抱歉发生这样的问题，这类问题通常因为助听器设备有损坏，我没有办法立刻处理。但我会尽快联系你的医生。(Sorry to hear that, I can't help with this right away. I will inform your audiologist immediately.)")
+        # utter submit template
+        dispatcher.utter_template("utter_affirm", tracker)
         return []
 
 

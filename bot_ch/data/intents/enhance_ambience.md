@@ -14,3 +14,9 @@
 - 我想听到叶子沙沙响
 - 我想听到更多环境的声音
 - 我想听到海浪的声音
+
+## intent:increase_bright
+- 助听器声音太闷
+
+## intent:increase_soft_gain
+- 我很难听清别人讲话

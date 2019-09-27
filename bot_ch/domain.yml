@@ -29,6 +29,16 @@ intents:
 entities:
 - features
 slots:
+  MPO:
+    type: categorical
+    values:
+    - increase
+    - decrease
+  brightness:
+    type: categorical
+    values:
+    - increase
+    - decrease
   label:
     type: categorical
     values:
@@ -36,6 +46,11 @@ slots:
     - meeting room work meeting
     - home just me
     - kitchen meal time
+  softness:
+    type: categorical
+    values:
+    - increase
+    - decrease
   user_name:
     type: unfeaturized
   userid:
@@ -54,18 +69,21 @@ templates:
       Too much soft sounds may require too much efforts for process. Would you like
       to try?)
   utter_increase_bright:
-  - text: 我懂了。 似乎由于中高频增益太低，我将增加亮度以更好地区分语音中的对比度(I see. It seems because the mid high
-      frequency gain too low, I will increase the brightness for better distinguish
-      contrasts in speech).
+  - text: 我懂了。 似乎由于中高频增益太低，我将增加亮度以更好地区分语音中的对比度。有没有觉得好一点了呢？(I see. It seems because
+      the mid high frequency gain too low, I will increase the brightness for better
+      distinguish contrasts in speech， would you like this setting for current context?).
   utter_increase_soft_gain:
-  - text: 嗯，我想也许是因为柔和声音的增益太低，所以我会增加柔和增益控制的设置。(emmm, I think maybe because gain on
-      soft sounds is too low, I will increase the setting of soft gain control. )
+  - text: 嗯，我想也许是因为柔和声音的增益太低，所以我会增加柔和增益控制的设置。是不是好多了？(emmm, I think maybe because gain
+      on soft sounds is too low, I will increase the setting of soft gain control.
+      Are you satisfied with the adjustment? )
   utter_reduce_bright:
-  - text: 不用担心，因为声音明亮度太高，我会减少明亮感控制的设置。(Don't worry, that maybe because the brightness
-      is too high, I will reduce the setting of the bright perception control.)
+  - text: 不用担心，因为声音明亮度太高，我会减少明亮感控制的设置。现在好点了吗？(Don't worry, that maybe because the
+      brightness is too high, I will reduce the setting of the bright perception control.
+      Are you satisfied with the changes in setting?)
   utter_decrease_soft_gain:
-  - text: 别着急，我可以帮助您减少软增益控制的设置，以减少感知到的柔和声音。(Calm down, I can help you to reduce the
-      setting of the soft gain control, in order to get perceive less soft sounds.)
+  - text: 别着急，我可以帮助您减少软增益控制的设置，以减少感知到的柔和声音。感觉好一些了吗？(Calm down, I can help you to reduce
+      the setting of the soft gain control, in order to get perceive less soft sounds.
+      Is the OPN performing better?)
   utter_troubleshooting:
   - text: 很抱歉发生这样的问题，这类问题通常因为助听器设备有损坏，我没有办法立刻处理。但我会尽快联系你的医生。(Sorry to hear that, I
       can't help with this right away. I will inform your audiologist immediately.)
@@ -76,10 +94,10 @@ templates:
   - text: 我明白了，來试试调高MPO。现在感觉怎么样？(Got it! Would you like to try tuning on a bit MPO
       setting?)
   utter_decrease_MPO:
-  - text: 來试试调低MPO得到更低的音量，现在更满意了吗(Let's turn down MPO to getter lower volumn.)
+  - text: 來试试调低MPO得到更低的音量，现在还有那里有问题吗(Let's turn down MPO to getter lower volumn.)
   utter_reduce_MPO:
-  - text: 我会尝试调低MPO的设定，你觉得更满意了吗？(It's a pity. I will turn down the MPO setting, would
-      you like to try?)
+  - text: 我会尝试调低MPO的设定，你觉得现在是你想要的效果了吗？(It's a pity. I will turn down the MPO setting,
+      would you like to try?)
   utter_enhance_ambience:
   - text: 尝试增加全向性以转移注意力以增强环境声音吗？ 这样的调节有帮助吗？(try increase omnidirectionality in order
       to shift attention to enhance ambient sounds ? is that in this context ?)
@@ -119,7 +137,7 @@ templates:
   utter_crisp_change:
   - text: This will help you perceive voice better. Would you like to try this out?
   utter_default:
-  - text: 对不起，我没听明白。可以重复一边吗。
+  - text: 对不起，我没听明白。可以重复一遍吗。
   utter_deny:
   - text: 还是不满意？ 來描述一下你听到的有什么问题吧。
   utter_did_that_help:
@@ -160,6 +178,7 @@ templates:
   utter_who:
   - text: 我是由Oticon公司设计的AI机器人原型，我可以根据周围环境和你的需求调节助听器，并且可以转达给你的医生。现在你的助听器设定还令你满意吗？
 actions:
+- action_note_adjust
 - action_fetch_UserId
 - action_hello_world
 - action_leave_note

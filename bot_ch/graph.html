@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Rasa Core Visualisation</title>
+    <script src="https://dagrejs.github.io/project/dagre-d3/latest/dagre-d3.min.js"></script>
+    <script src="https://dagrejs.github.io/project/dagre/latest/dagre.min.js"></script>
+    <script src="https://d3js.org/d3.v4.js"></script>
+    <script src="https://dagrejs.github.io/project/graphlib-dot/v0.6.3/graphlib-dot.js"></script>
+</head>
+<body>
+<div id="errormsg" style="color: #b00"></div>
+<svg>
+    <style>
+        .node.invisible > rect {
+            display: none;
+        }
+
+        .node.start > rect {
+            fill: #7f7;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node.end > rect {
+            fill: #f77;
+            rx: 30;
+            ry: 18;
+        }
+
+        .node:not(.active) > rect, .node:not(.active) > .label {
+            opacity: 0.4;
+        }
+
+        .edgePath:not(.active) path {
+            opacity: 0.4;
+        }
+
+        .node.ellipsis > rect {
+            fill: #CCC;
+        }
+
+        .node.intent > rect {
+            fill: #7ff;
+        }
+
+        .node.dashed > rect {
+            stroke-dasharray: 5;
+        }
+
+        text {
+            font-weight: 300;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serf, serif;
+            font-size: 14px;
+            color: #1f1d1d;
+        }
+
+        .node rect {
+            stroke: #444;
+            fill: #fff;
+            stroke-width: 1.5px;
+        }
+
+        .edgePath path {
+            stroke: #333;
+            stroke-width: 1.5px;
+        }
+
+        svg {
+            position: fixed;
+            top: 10px;
+            left: 0;
+            height: 100%;
+            width: 100%
+        }
+    </style>
+    <g></g>
+</svg>
+<script>
+
+  function serveGraph() {
+    let oldInputGraphValue;
+
+    const url = 'visualization.dot';
+    const refreshInterval = 500;
+
+    // trigger a refresh by fetching an updated graph
+    setInterval(function () {
+      fetch(url).then(r => r.text()).then(dot => {
+        document.getElementById('errormsg').innerHTML = '';
+        if (oldInputGraphValue === dot) return;
+
+        oldInputGraphValue = dot;
+        drawGraph(dot);
+      }).catch(err => {
+        document.getElementById('errormsg').innerHTML =
+          'Failed to update plot. (' + err.message + ')';
+      });
+    }, refreshInterval);
+  }
+
+  function drawGraph(graph) {
+    let g = graphlibDot.read(graph);
+    // Set margins, if not present
+    if (!g.graph().hasOwnProperty("marginx") &&
+      !g.graph().hasOwnProperty("marginy")) {
+      g.graph().marginx = 20;
+      g.graph().marginy = 20;
+    }
+    g.graph().transition = function (selection) {
+      return selection.transition().duration(300);
+    };
+    // Render the graph into svg g
+    d3.select("svg g").call(render, g);
+  }
+  // Set up zoom support
+  const svg = d3.select("svg"),
+    inner = d3.select("svg g"),
+    zoom = d3.zoom().on("zoom", function () {
+      inner.attr("transform", d3.event.transform);
+    });
+  svg.call(zoom);
+
+  // Create and configure the renderer
+  const render = dagreD3.render();
+
+  let isClient = false;
+  isClient = true;
+
+  if (isClient) {
+    // Mark all nodes and their edges as active
+    cssRules = document.styleSheets[0].cssRules;
+    cssRules[3].style.opacity = 1;
+    cssRules[4].style.opacity = 1;
+
+    let graph;
+    graph = `digraph  {
+0 [class="start active", fillcolor=green, fontsize=12, label=START, style=filled];
+"-1" [class=end, fillcolor=red, fontsize=12, label=END, style=filled];
+1 [class="", fontsize=12, label=utter_increase_bright];
+2 [class="", fontsize=12, label=utter_increase_MPO];
+3 [class="", fontsize=12, label=action_leave_note];
+4 [class="", fontsize=12, label=utter_troubleshooting];
+5 [class="", fontsize=12, label=utter_thanks];
+6 [class="", fontsize=12, label=utter_goodbye];
+7 [class="", fontsize=12, label=utter_reduce_bright];
+8 [class="", fontsize=12, label=utter_affirm];
+12 [class="", fontsize=12, label=utter_decrease_MPO];
+20 [class="", fontsize=12, label=utter_thanks];
+22 [class="", fontsize=12, label=utter_this_is_bright];
+23 [class="", fontsize=12, label=utter_enhance_ambience];
+24 [class="", fontsize=12, label=utter_affirm];
+26 [class="", fontsize=12, label=utter_noise_reduction_off];
+32 [class="", fontsize=12, label=utter_human_to_contact];
+33 [class="", fontsize=12, label=utter_octicon];
+34 [class="", fontsize=12, label=utter_greet];
+35 [class="", fontsize=12, label=utter_decrease_MPO];
+38 [class="", fontsize=12, label=utter_email_audiologist];
+39 [class="", fontsize=12, label=utter_call_audiologist];
+42 [class="", fontsize=12, label=utter_out_of_scope];
+43 [class="", fontsize=12, label=action_fetch_labels];
+44 [class="", fontsize=12, label=utter_enhance_speech];
+46 [class="", fontsize=12, label=utter_focused];
+49 [class="", fontsize=12, label=action_fetch_UserId];
+50 [class="", fontsize=12, label=action_hello_world];
+51 [class="", fontsize=12, label=utter_increase_soft_gain];
+56 [class="", fontsize=12, label=utter_decrease_general_gain];
+59 [class="", fontsize=12, label=utter_reduce_bright];
+66 [class="", fontsize=12, label=utter_decrease_soft_gain];
+70 [class="", fontsize=12, label=utter_reduce_noise];
+74 [class="", fontsize=12, label=utter_frontal_focus];
+75 [class="", fontsize=12, label=utter_make_note];
+77 [class="", fontsize=12, label=utter_this_is_soft_gain];
+85 [class="", fontsize=12, label=utter_reduce_bright];
+86 [class="", fontsize=12, label=utter_decrease_MPO];
+87 [class="", fontsize=12, label=utter_troubleshooting];
+90 [class="", fontsize=12, label=utter_reduce_MPO];
+91 [class="", fontsize=12, label=utter_this_is_MPO];
+92 [class="", fontsize=12, label=utter_botname];
+93 [class="", fontsize=12, label=utter_who];
+94 [class="", fontsize=12, label=utter_what];
+104 [class=intent, fillcolor=lightblue, label="\助\听\器\不\清\楚", shape=rect, style=filled];
+105 [class=intent, fillcolor=lightblue, label="\声\音\太\刺\耳", shape=rect, style=filled];
+106 [class=intent, fillcolor=lightblue, label="\我\想\听\到\海\浪\的\声\音", shape=rect, style=filled];
+107 [class=intent, fillcolor=lightblue, label="\我\宁\愿\跟\真\人\说\话", shape=rect, style=filled];
+108 [class=intent, fillcolor=lightblue, label="\我\要\跟\跟\助\听\器\的\一\个\真\实\员\工\讲\话", shape=rect, style=filled];
+109 [class=intent, fillcolor=lightblue, label="\你\好\吗", shape=rect, style=filled];
+110 [class=intent, fillcolor=lightblue, label="\帮\我\联\系\听\力\医\生", shape=rect, style=filled];
+111 [class=intent, fillcolor=lightblue, label="\我\想\跟\我\的\听\力\医\生\打\电\话", shape=rect, style=filled];
+112 [class=intent, fillcolor=lightblue, label="\你\很\无\聊", shape=rect, style=filled];
+113 [class=intent, fillcolor=lightblue, label="\我\想\调\整\现\在\的\设\置", shape=rect, style=filled];
+114 [class=intent, fillcolor=lightblue, label="\动\作\测\试", shape=rect, style=filled];
+115 [class=intent, fillcolor=lightblue, label="\我\想\要\更\自\然\的\声\音", shape=rect, style=filled];
+116 [class=intent, fillcolor=lightblue, label="\本\身\就\产\生\噪\声", shape=rect, style=filled];
+117 [class=intent, fillcolor=lightblue, label="\你\是\谁", shape=rect, style=filled];
+118 [class=intent, fillcolor=lightblue, label="\你\是\什\么", shape=rect, style=filled];
+119 [class=intent, fillcolor=lightblue, label="\你\可\以\干\什\么", shape=rect, style=filled];
+120 [class=intent, fillcolor=lightblue, label="\有\静\电", shape=rect, style=filled];
+121 [class=intent, fillcolor=lightblue, label="\我\们\回\聊", shape=rect, style=filled];
+122 [class=intent, fillcolor=lightblue, label="\好\的\，\谢\谢", shape=rect, style=filled];
+123 [class=intent, fillcolor=lightblue, label="\没\有", shape=rect, style=filled];
+124 [class=intent, fillcolor=lightblue, label="\可\以", shape=rect, style=filled];
+125 [class=intent, fillcolor=lightblue, label="\没\有", shape=rect, style=filled];
+126 [class=intent, fillcolor=lightblue, label="\我\接\受", shape=rect, style=filled];
+127 [class=intent, fillcolor=lightblue, label="\谢\谢\大\家", shape=rect, style=filled];
+128 [class=intent, fillcolor=lightblue, label="\再\次\感\谢\你", shape=rect, style=filled];
+129 [class=intent, fillcolor=lightblue, label="\暂\时\再\见", shape=rect, style=filled];
+130 [class=intent, fillcolor=lightblue, label="\我\满\意\了", shape=rect, style=filled];
+131 [class=intent, fillcolor=lightblue, label="\没\门", shape=rect, style=filled];
+132 [class=intent, fillcolor=lightblue, label="\亮\度\感\知\调\节\控\制\什\么\?", shape=rect, style=filled];
+133 [class=intent, fillcolor=lightblue, label="\谢\谢\你\的\帮\助", shape=rect, style=filled];
+134 [class=intent, fillcolor=lightblue, label="\很\好\，\谢\谢", shape=rect, style=filled];
+135 [class=intent, fillcolor=lightblue, label="\我\满\意\了", shape=rect, style=filled];
+136 [class=intent, fillcolor=lightblue, label="\不", shape=rect, style=filled];
+137 [class=intent, fillcolor=lightblue, label="\我\满\意\了", shape=rect, style=filled];
+138 [class=intent, fillcolor=lightblue, label="\不\好", shape=rect, style=filled];
+139 [class=intent, fillcolor=lightblue, label="\现\在\好\了", shape=rect, style=filled];
+140 [class=intent, fillcolor=lightblue, label="\我\不\这\么\认\为", shape=rect, style=filled];
+141 [class=intent, fillcolor=lightblue, label="\惊\吓\反\应", shape=rect, style=filled];
+142 [class=intent, fillcolor=lightblue, label="\声\音\听\起\来\很\粗\糙", shape=rect, style=filled];
+143 [class=intent, fillcolor=lightblue, label="\声\音\令\人\不\愉\快", shape=rect, style=filled];
+144 [class=intent, fillcolor=lightblue, label="\现\在\好\了", shape=rect, style=filled];
+145 [class=intent, fillcolor=lightblue, label="\我\不\这\么\认\为", shape=rect, style=filled];
+146 [class=intent, fillcolor=lightblue, label="\现\在\不\错", shape=rect, style=filled];
+147 [class=intent, fillcolor=lightblue, label="\从\不", shape=rect, style=filled];
+148 [class=intent, fillcolor=lightblue, label="\什\么\是\柔\软\声\音\的\感\知\控\制", shape=rect, style=filled];
+149 [class=intent, fillcolor=lightblue, label="\我\同\意", shape=rect, style=filled];
+150 [class=intent, fillcolor=lightblue, label="\我\满\意\了", shape=rect, style=filled];
+151 [class=intent, fillcolor=lightblue, label="\不\喜\欢", shape=rect, style=filled];
+152 [class=intent, fillcolor=lightblue, label="\我\接\受", shape=rect, style=filled];
+153 [class=intent, fillcolor=lightblue, label="\没\有", shape=rect, style=filled];
+154 [class=intent, fillcolor=lightblue, label="\调\节\声\音\的\软\硬\会\带\来\什\么\变\化\？", shape=rect, style=filled];
+155 [class=intent, fillcolor=lightblue, label="\现\在\可\以", shape=rect, style=filled];
+156 [class=intent, fillcolor=lightblue, label="\不\喜\欢", shape=rect, style=filled];
+157 [class=intent, fillcolor=lightblue, label="\你\帮\了\很\多\忙", shape=rect, style=filled];
+158 [class=intent, fillcolor=lightblue, label="\现\在\不\错", shape=rect, style=filled];
+159 [class=intent, fillcolor=lightblue, label="\不\好", shape=rect, style=filled];
+160 [class=intent, fillcolor=lightblue, label="\一\点\也\不", shape=rect, style=filled];
+161 [class=intent, fillcolor=lightblue, label="\好\的\，\谢\谢", shape=rect, style=filled];
+162 [class=intent, fillcolor=lightblue, label="MPO\控\制\什\么", shape=rect, style=filled];
+0 -> 104  [class="", key=0];
+0 -> 105  [class="", key=0];
+0 -> 106  [class="", key=0];
+0 -> 107  [class="", key=0];
+0 -> 108  [class="", key=0];
+0 -> 109  [class="", key=0];
+0 -> 110  [class="", key=0];
+0 -> 111  [class="", key=0];
+0 -> 112  [class="", key=0];
+0 -> 113  [class="", key=0];
+0 -> 114  [class="", key=0];
+0 -> 115  [class="", key=0];
+0 -> 116  [class="", key=0];
+0 -> 117  [class="", key=0];
+0 -> 118  [class="", key=0];
+0 -> 119  [class="", key=0];
+0 -> 120  [class="", key=0];
+0 -> 121  [class="", key=0];
+0 -> 122  [class="", key=0];
+1 -> 123  [class="", key=0];
+1 -> 124  [class="", key=0];
+2 -> 125  [class="", key=0];
+2 -> 126  [class="", key=0];
+3 -> 4  [class="", key=NONE, label=""];
+4 -> 127  [class="", key=0];
+4 -> 128  [class="", key=0];
+5 -> 129  [class="", key=0];
+6 -> "-1"  [class="", key=NONE, label=""];
+7 -> 130  [class="", key=0];
+7 -> 131  [class="", key=0];
+7 -> 132  [class="", key=0];
+8 -> 133  [class="", key=0];
+8 -> 134  [class="", key=0];
+12 -> 135  [class="", key=0];
+12 -> 136  [class="", key=0];
+20 -> "-1"  [class="", key=NONE, label=""];
+22 -> "-1"  [class="", key=NONE, label=""];
+23 -> 137  [class="", key=0];
+23 -> 138  [class="", key=0];
+24 -> "-1"  [class="", key=NONE, label=""];
+26 -> 139  [class="", key=0];
+26 -> 140  [class="", key=0];
+32 -> "-1"  [class="", key=NONE, label=""];
+33 -> "-1"  [class="", key=NONE, label=""];
+34 -> 141  [class="", key=0];
+34 -> 142  [class="", key=0];
+34 -> 143  [class="", key=0];
+35 -> 144  [class="", key=0];
+35 -> 145  [class="", key=0];
+38 -> "-1"  [class="", key=NONE, label=""];
+39 -> "-1"  [class="", key=NONE, label=""];
+42 -> "-1"  [class="", key=NONE, label=""];
+43 -> 44  [class="", key=NONE, label=""];
+43 -> 46  [class="", key=NONE, label=""];
+44 -> "-1"  [class="", key=NONE, label=""];
+46 -> "-1"  [class="", key=NONE, label=""];
+49 -> 50  [class="", key=NONE, label=""];
+50 -> "-1"  [class="", key=NONE, label=""];
+51 -> 146  [class="", key=0];
+51 -> 147  [class="", key=0];
+51 -> 148  [class="", key=0];
+56 -> 149  [class="", key=0];
+59 -> 150  [class="", key=0];
+59 -> 151  [class="", key=0];
+66 -> 152  [class="", key=0];
+66 -> 153  [class="", key=0];
+66 -> 154  [class="", key=0];
+70 -> 155  [class="", key=0];
+70 -> 156  [class="", key=0];
+74 -> 157  [class="", key=0];
+75 -> "-1"  [class="", key=NONE, label=""];
+77 -> 158  [class="", key=0];
+85 -> 159  [class="", key=0];
+86 -> 160  [class="", key=0];
+87 -> 161  [class="", key=0];
+90 -> 162  [class="", key=0];
+91 -> "-1"  [class="", key=NONE, label=""];
+92 -> "-1"  [class="", key=NONE, label=""];
+93 -> "-1"  [class="", key=NONE, label=""];
+94 -> "-1"  [class="", key=NONE, label=""];
+104 -> 1  [class="", key=0];
+105 -> 7  [class="", key=0];
+106 -> 23  [class="", key=0];
+107 -> 32  [class="", key=0];
+108 -> 33  [class="", key=0];
+109 -> 34  [class="", key=0];
+110 -> 38  [class="", key=0];
+111 -> 39  [class="", key=0];
+112 -> 42  [class="", key=0];
+113 -> 43  [class="", key=0];
+114 -> 49  [class="", key=0];
+115 -> 51  [class="", key=0];
+116 -> 66  [class="", key=0];
+117 -> 92  [class="", key=0];
+118 -> 93  [class="", key=0];
+119 -> 94  [class="", key=0];
+120 -> 4  [class="", key=0];
+121 -> 6  [class="", key=0];
+122 -> 20  [class="", key=0];
+123 -> 2  [class="", key=0];
+124 -> 8  [class="", key=0];
+125 -> 3  [class="", key=0];
+126 -> 8  [class="", key=0];
+127 -> 5  [class="", key=0];
+128 -> 20  [class="", key=0];
+129 -> 6  [class="", key=0];
+130 -> 8  [class="", key=0];
+131 -> 12  [class="", key=0];
+132 -> 22  [class="", key=0];
+133 -> 5  [class="", key=0];
+134 -> 20  [class="", key=0];
+135 -> 8  [class="", key=0];
+136 -> 3  [class="", key=0];
+137 -> 24  [class="", key=0];
+138 -> 26  [class="", key=0];
+139 -> 24  [class="", key=0];
+140 -> 4  [class="", key=0];
+141 -> 35  [class="", key=0];
+142 -> 85  [class="", key=0];
+143 -> 90  [class="", key=0];
+144 -> 8  [class="", key=0];
+145 -> 56  [class="", key=0];
+146 -> 8  [class="", key=0];
+147 -> 59  [class="", key=0];
+148 -> 77  [class="", key=0];
+149 -> 24  [class="", key=0];
+150 -> 8  [class="", key=0];
+151 -> 4  [class="", key=0];
+152 -> 8  [class="", key=0];
+153 -> 70  [class="", key=0];
+154 -> 77  [class="", key=0];
+155 -> 24  [class="", key=0];
+156 -> 74  [class="", key=0];
+157 -> 75  [class="", key=0];
+158 -> 8  [class="", key=0];
+159 -> 86  [class="", key=0];
+160 -> 87  [class="", key=0];
+161 -> 75  [class="", key=0];
+162 -> 91  [class="", key=0];
+}
+`;
+    drawGraph(graph);
+  } else {
+    serveGraph();
+  }
+
+
+</script>
+</body>
+</html>

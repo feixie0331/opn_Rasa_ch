@@ -10,11 +10,9 @@
   - slot{"label":"lecture listening to speech"}
   - utter_focused
 
-
 ## thanks path
 * thanks
   - utter_thanks
-
 
 ## say goodbye
 * goodbye

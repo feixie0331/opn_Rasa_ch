@@ -9,10 +9,6 @@ pipeline:
 - name: "CRFEntityExtractor"
 - name: "EntitySynonymMapper"
 - name: "CountVectorsFeaturizer"
-- name: "CountVectorsFeaturizer"
-  analyzer: "char_wb"
-  min_ngram: 1
-  max_ngram: 4
 - name: "EmbeddingIntentClassifier"  
 
 # Configuration for Rasa Core.
@@ -24,8 +20,8 @@ policies:
     fallback_core_action_name: "action_default_fallback"
     fallback_nlu_action_name: "action_default_fallback"
     deny_suggestion_intent_name: "out_of_scope"
-  - name: MemoizationPolicy
-    max_history: 6
+#  - name: MemoizationPolicy
+#    max_history: 6
 #############################################
 #  - name: KerasPolicy
 #    featurizer:
